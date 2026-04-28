@@ -1,0 +1,21 @@
+:root {
+  /* Core Brand */
+  --primary: #062f1f;
+  --primary-light: #0d462f;
+
+  /* Gold Accent */
+  --accent: #b88924;
+  --accent-light: #d5aa3d;
+
+  /* Background + Text */
+  --bg: #f8f6ef;
+  --text-muted: #315345;
+
+  /* UI */
+  --card: #ffffff;
+  --border: rgba(184, 137, 36, 0.2);
+}
+
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';

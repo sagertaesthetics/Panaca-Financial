@@ -1,0 +1,320 @@
+import { useState } from "react";
+import logoMark from "./components/Assets/Panaca_Mark.png";
+import NavBar from "./components/Nav_Bar/Nav_Bar";
+import Contact from "./components/Nav_Bar/Contact";
+import {
+  ownerEmail,
+  services,
+} from "./components/Config_Files/ServiceConfigs";
+import AllServices from "./components/Services/All_Services";
+import FAQPage from "./components/Nav_Bar/FAQ";
+import EstatePreservation from "./components/Services/EstatePreservation";
+import BuySell from "./components/Services/BuySell";
+import CharitableGiving from "./components/Services/CharitableGiving";
+import CorporateTax from "./components/Services/CorporateTax";
+import CDA from "./components/Services/CDA";
+import CorporateLifeInsurance from "./components/Services/CorporateLifeInsurance";
+
+type Page =
+  | "home"
+  | "services"
+  | "estate-preservation"
+  | "charitable-giving"
+  | "buy-sell"
+  | "corporate-life"
+  | "cda"
+  | "taxes"
+  | "resources"
+  | "guides"
+  | "faq"
+  | "contact";
+
+export default function App() {
+  const [page, setPage] = useState<Page>("home");
+  const selectedService = services.find((s) => s.id === page);
+
+  return (
+    <main className="min-h-screen bg-background text-foreground">
+      <NavBar setPage={setPage} />
+
+      {page === "home" && (
+        <>
+          <section className="relative overflow-hidden px-6 py-24 bg-primary text-primary-foreground">
+            <div className="soft-orb top-20 left-10 w-32 h-32" />
+            <div className="soft-orb bottom-40 right-10 w-40 h-40" />
+
+            <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <p className="uppercase tracking-[0.35em] text-accent mb-5">
+                  Tax • Wealth • Legacy
+                </p>
+
+                <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-6">
+                  Keep more of your money.
+                  <span className="block text-accent">
+                    Build more of your future.
+                  </span>
+                </h1>
+
+                <p className="text-lg md:text-xl text-white/75 max-w-xl leading-relaxed mb-8">
+                  Panaca Financial helps families,
+                  professionals, and business owners reduce tax
+                  pressure, protect what matters most, and plan
+                  for multi-generational wealth.
+                </p>
+
+                <div className="flex flex-wrap gap-4">
+                  <button
+                    onClick={() => setPage("services")}
+                    className="px-7 py-3 rounded-full bg-accent text-primary hover:opacity-90 transition shadow-md"
+                  >
+                    Explore Services
+                  </button>
+
+                  <button
+                    onClick={() => setPage("contact")}
+                    className="px-7 py-3 rounded-full border border-accent text-white hover:bg-accent/10 transition"
+                  >
+                    Contact
+                  </button>
+                </div>
+              </div>
+
+              <div className="relative flex justify-center">
+                <div className="absolute w-96 h-96 bg-accent/25 rounded-full blur-3xl" />
+                <img
+                  src={logoMark}
+                  alt="Panaca Financial"
+                  className="relative w-72 md:w-96 mix-blend-screen drop-shadow-xl"
+                />
+              </div>
+            </div>
+          </section>
+
+          <div className="gold-divider" />
+
+          <section className="relative overflow-hidden px-6 py-24 bg-primary text-primary-foreground">
+            <div className="relative z-10 max-w-7xl mx-auto">
+              <p className="uppercase tracking-[0.35em] text-accent mb-4">
+                Services
+              </p>
+
+              <h2 className="text-4xl md:text-6xl font-serif mb-10">
+                Keep more. Protect more.
+                <span className="block text-accent">
+                  Pass on more.
+                </span>
+              </h2>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                {services.map((s) => (
+                  <button
+                    key={s.id}
+                    onClick={() => setPage(s.id as Page)}
+                    className="group text-left premium-card p-7"
+                  >
+                    <h3 className="text-2xl font-serif text-accent mb-4">
+                      {s.title}
+                    </h3>
+                    <p className="text-white/75 leading-relaxed mb-6">
+                      {s.short}
+                    </p>
+                    <span className="text-accent text-sm tracking-wide group-hover:tracking-widest transition-all">
+                      Learn More →
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <div className="gold-divider" />
+
+          <section className="px-6 py-24 bg-primary text-primary-foreground">
+            <div className="max-w-6xl mx-auto rounded-[2rem] bg-white/8 p-10 md:p-16 text-center shadow-2xl border border-accent/30 gold-glow">
+              <p className="uppercase tracking-[0.35em] text-accent mb-4">
+                Start Planning
+              </p>
+
+              <h2 className="text-4xl md:text-6xl font-serif mb-6">
+                Ready to plan with confidence?
+              </h2>
+
+              <p className="text-white/75 max-w-2xl mx-auto mb-8">
+                Start with a conversation about your taxes,
+                legacy, family goals, and long-term financial
+                future.
+              </p>
+
+              <button
+                onClick={() => setPage("contact")}
+                className="px-8 py-3 rounded-full bg-accent text-primary hover:opacity-90 transition"
+              >
+                Contact Panaca Financial
+              </button>
+            </div>
+          </section>
+        </>
+      )}
+
+      {page === "services" && <AllServices setPage={setPage} />}
+
+      {page === "resources" && (
+        <section className="relative min-h-screen bg-primary text-primary-foreground px-6 py-24 overflow-hidden">
+          <div className="soft-orb top-20 left-10 w-40 h-40" />
+          <div className="soft-orb bottom-20 right-10 w-56 h-56" />
+
+          <div className="relative z-10 max-w-5xl mx-auto">
+            <p className="uppercase tracking-[0.35em] text-accent mb-4">
+              Resources
+            </p>
+
+            <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-6">
+              Learn more.
+              <span className="block text-accent">
+                Plan better.
+              </span>
+            </h1>
+
+            <p className="text-white/75 max-w-3xl text-lg leading-relaxed mb-12">
+              Explore guides and answers designed to help you
+              understand tax, wealth building, and long-term
+              financial planning.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <button
+                onClick={() => setPage("guides")}
+                className="text-left premium-card p-7"
+              >
+                <h3 className="text-2xl font-serif text-accent mb-4">
+                  Guides
+                </h3>
+
+                <p className="text-white/75 mb-6">
+                  Step-by-step insights on tax planning, estate
+                  strategy, and building long-term wealth.
+                </p>
+
+                <span className="text-accent text-sm tracking-wide">
+                  View Guides →
+                </span>
+              </button>
+
+              <button
+                onClick={() => setPage("faq")}
+                className="text-left premium-card p-7"
+              >
+                <h3 className="text-2xl font-serif text-accent mb-4">
+                  FAQ
+                </h3>
+
+                <p className="text-white/75 mb-6">
+                  Common questions about financial planning,
+                  taxes, and protecting your future.
+                </p>
+
+                <span className="text-accent text-sm tracking-wide">
+                  View FAQ →
+                </span>
+              </button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {page === "guides" && (
+        <section className="min-h-screen bg-primary text-primary-foreground px-6 py-24">
+          <div className="max-w-5xl mx-auto">
+            <p className="uppercase tracking-[0.35em] text-accent mb-4">
+              Resources
+            </p>
+            <h1 className="text-5xl md:text-7xl font-serif text-accent mb-6">
+              Guides
+            </h1>
+            <p className="text-white/75">
+              Guides will be added here.
+            </p>
+          </div>
+        </section>
+      )}
+
+      {page === "faq" && <FAQPage />}
+
+      {page === "cda" && <CDA setPage={setPage} />}
+
+      {page === "contact" && <Contact />}
+
+      {page === "buy-sell" && <BuySell setPage={setPage} />}
+
+      {page === "taxes" && <CorporateTax setPage={setPage} />}
+
+      {page === "charitable-giving" && (
+        <CharitableGiving setPage={setPage} />
+      )}
+
+      {page === "corporate-life" && (
+        <CorporateLifeInsurance setPage={setPage} />
+      )}
+
+      {page === "estate-preservation" && (
+        <EstatePreservation setPage={setPage} />
+      )}
+
+      {selectedService &&
+        page !== "home" &&
+        page !== "services" &&
+        page !== "resources" &&
+        page !== "guides" &&
+        page !== "faq" &&
+        page !== "contact" &&
+        page !== "buy-sell" &&
+        page !== "charitable-giving" &&
+        page !== "taxes" &&
+        page !== "cda" &&
+        page !== "corporate-life" &&
+        page !== "estate-preservation" && (
+          <section className="min-h-screen bg-primary text-primary-foreground px-6 py-24">
+            <div className="max-w-5xl mx-auto">
+              <button
+                onClick={() => setPage("services")}
+                className="mb-10 text-accent hover:underline"
+              >
+                ← Back to Services
+              </button>
+
+              <p className="uppercase tracking-[0.35em] text-accent mb-4">
+                Panaca Financial
+              </p>
+
+              <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-6">
+                {selectedService.title}
+              </h1>
+
+              <p className="text-white/75 max-w-3xl text-lg leading-relaxed mb-12">
+                {selectedService.short}
+              </p>
+
+              <div className="grid gap-5 mb-12">
+                {selectedService.details.map((d) => (
+                  <div
+                    key={d}
+                    className="premium-card p-6 text-white/80"
+                  >
+                    {d}
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href={`mailto:${ownerEmail}`}
+                className="inline-block px-8 py-3 rounded-full bg-accent text-primary hover:opacity-90 transition"
+              >
+                Contact Owner
+              </a>
+            </div>
+          </section>
+        )}
+    </main>
+  );
+}
