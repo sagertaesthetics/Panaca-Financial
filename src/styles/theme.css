@@ -194,9 +194,10 @@
 }
 /* === PREMIUM UI HELPERS === */
 @layer components {
-  .premium-card {
-    @apply rounded-3xl bg-white/8 border border-accent/30 shadow-2xl backdrop-blur-md transition;
-  }
+.premium-card {
+  border-radius: 1.5rem;
+  @apply bg-white/8 border border-accent/30 shadow-2xl backdrop-blur-md transition;
+}
 
   .premium-card:hover {
     @apply border-accent bg-white/12 -translate-y-1;
