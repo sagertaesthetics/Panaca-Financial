@@ -193,7 +193,6 @@
   }
 }
 /* === PREMIUM UI HELPERS === */
-@layer components {
 .premium-card {
   border-radius: 1.5rem;
   background: rgba(255, 255, 255, 0.08);
