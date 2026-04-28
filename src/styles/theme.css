@@ -209,21 +209,29 @@
   transform: translateY(-0.25rem);
 }
 
-  .gold-divider {
-    @apply relative h-20 bg-primary overflow-hidden;
-  }
-
-  .gold-divider::before {
-    content: "";
-    @apply absolute left-1/2 top-1/2 h-[2px] w-[620px] -translate-x-1/2 bg-accent/50 blur-md;
-  }
-
-  .soft-orb {
-    @apply pointer-events-none absolute rounded-full bg-accent/10 blur-3xl;
-  }
+.gold-divider {
+  position: relative;
+  height: 5rem;
+  background: var(--primary);
+  overflow: hidden;
 }
 
-/* keep this outside */
-.gold-glow {
-  box-shadow: 0 0 40px rgba(184, 137, 36, 0.18);
+.gold-divider::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 2px;
+  width: 620px;
+  transform: translateX(-50%);
+  background: rgba(184, 137, 36, 0.5);
+  filter: blur(12px);
+}
+
+.soft-orb {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 9999px;
+  background: rgba(184, 137, 36, 0.1);
+  filter: blur(64px);
 }
