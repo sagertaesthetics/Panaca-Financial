@@ -235,3 +235,7 @@
   background: rgba(184, 137, 36, 0.1);
   filter: blur(64px);
 }
+/* keep this outside */
+.gold-glow {
+  box-shadow: 0 0 40px rgba(184, 137, 36, 0.18);
+}
