@@ -223,21 +223,117 @@ export default function App() {
         </section>
       )}
 
-      {page === "guides" && (
-        <section className="min-h-screen bg-primary text-primary-foreground px-6 py-24">
-          <div className="max-w-5xl mx-auto">
-            <p className="uppercase tracking-[0.35em] text-accent mb-4">
-              Resources
-            </p>
-            <h1 className="text-5xl md:text-7xl font-serif text-accent mb-6">
-              Guides
-            </h1>
-            <p className="text-white/75">
-              Guides will be added here.
-            </p>
+{page === "guides" && (
+  <section className="min-h-screen bg-primary text-primary-foreground px-6 py-24">
+    <div className="max-w-7xl mx-auto">
+      <button
+        onClick={() => setPage("resources")}
+        className="mb-10 text-accent hover:underline"
+      >
+        ← Back to Resources
+      </button>
+
+      <p className="uppercase tracking-[0.35em] text-accent mb-4">
+        Resources
+      </p>
+
+      <h1 className="text-5xl md:text-7xl font-serif text-accent mb-6">
+        Guides
+      </h1>
+
+      <p className="text-white/75 max-w-3xl mb-14">
+        Explore downloadable guides from trusted financial providers.
+      </p>
+
+      {[
+        {
+          title: "Wealth & Estate Planning",
+          items: [
+            ["Wealth Transfer", "Manulife", "/pdfs/Wealth Transfer -- Manulife.pdf"],
+            ["RRSP Estate Preservation", "Manulife", "/pdfs/RRSP Estate Preservation -- Manulife.pdf"],
+            ["Estate Bond", "Manulife", "/pdfs/Estate bond -- Manulife.pdf"],
+            ["Intergenerational Wealth Transfer", "Equitable", "/pdfs/Intergenerational Wealth Transfer -- Equitable.pdf"],
+            ["Corporate Estate Transfer", "Equitable", "/pdfs/Corporate Estate Transfer -- Equitable.pdf"],
+            ["Corporate Estate Transfer", "Cooperators", "/pdfs/Corporate Estate Transfer -- Cooperators.pdf"],
+          ],
+        },
+        {
+          title: "Retirement Planning",
+          items: [
+            ["Insured Retirement", "BMO", "/pdfs/Insured Retirement -- BMO.pdf"],
+            ["Insured Retirement", "Manulife", "/pdfs/Insured Retirement -- Manulife.pdf"],
+            ["Corporate Retirement", "Equitable", "/pdfs/Corporate Retirement -- Equitable.pdf"],
+          ],
+        },
+        {
+          title: "Business & Corporate Planning",
+          items: [
+            ["Buy Sell", "RBC", "/pdfs/Buy Sell RBC.pdf"],
+            ["Buy Sell", "Cooperators", "/pdfs/Buy Sell -- Cooperators.pdf"],
+            ["Buy Sell", "BMO", "/pdfs/Buy Sell -- BMO.pdf"],
+            ["Business Planning", "Manulife", "/pdfs/Business Planning -- Manulife.pdf"],
+            ["Immediate Financing Agreement", "RBC", "/pdfs/Immediate Financing Agreement -- RBC.pdf"],
+            ["Immediate Financing Agreement", "Cooperators", "/pdfs/Immediate Financing Agreement -- Cooperators.pdf"],
+          ],
+        },
+        {
+          title: "Insurance Strategies",
+          items: [
+            ["Life Insurance as an Asset Class", "Equitable", "/pdfs/Life insurance as an asset class -- Equitable.pdf"],
+            ["Corporate Owned Insurance", "RBC", "/pdfs/Corporate owned insurance -- RBC.pdf"],
+            ["Key Person", "Cooperators", "/pdfs/Key Person -- Cooperators.pdf"],
+            ["Secure Rental Property", "Cooperators", "/pdfs/Secure Rental Propert -- Cooperators.pdf"],
+          ],
+        },
+        {
+          title: "Family, Property & Giving",
+          items: [
+            ["Keep Your Cottage", "Cooperators", "/pdfs/Keep your cottage  -- Cooperators.pdf"],
+            ["Keep Your Cottage", "Manulife", "/pdfs/Keep your cottage  -- Manulife.pdf"],
+            ["Charitable Giving", "Equitable", "/pdfs/Charitable Giving -- Equitable.pdf"],
+            ["Charitable Giving", "Cooperators", "/pdfs/Charitable Giving -- Cooperators.pdf"],
+          ],
+        },
+        {
+          title: "Checklists & Tools",
+          items: [
+            ["Executor Checklist", "Empire", "/pdfs/Executor Checklist -- Empire.pdf"],
+          ],
+        },
+      ].map((section) => (
+        <div key={section.title} className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-serif text-accent mb-6">
+            {section.title}
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {section.items.map(([title, provider, file]) => (
+              <a
+                key={`${title}-${provider}`}
+                href={file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="premium-card p-6 block group"
+              >
+                <p className="text-xs uppercase tracking-[0.25em] text-accent mb-3">
+                  {provider}
+                </p>
+
+                <h3 className="text-2xl font-serif mb-4">
+                  {title}
+                </h3>
+
+                <span className="text-accent text-sm tracking-wide group-hover:tracking-widest transition-all">
+                  View PDF →
+                </span>
+              </a>
+            ))}
           </div>
-        </section>
-      )}
+        </div>
+      ))}
+    </div>
+  </section>
+)}
 
       {page === "faq" && <FAQPage />}
 
