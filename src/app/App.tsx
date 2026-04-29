@@ -242,62 +242,62 @@ export default function App() {
       </h1>
 
       <p className="text-white/75 max-w-3xl mb-14">
-        Explore downloadable guides from trusted financial providers.
+        Download guides from trusted financial providers.
       </p>
 
       {[
         {
           title: "Wealth & Estate Planning",
           items: [
-            ["Wealth Transfer", "Manulife", "/pdfs/Wealth Transfer -- Manulife.pdf"],
-            ["RRSP Estate Preservation", "Manulife", "/pdfs/RRSP Estate Preservation -- Manulife.pdf"],
-            ["Estate Bond", "Manulife", "/pdfs/Estate bond -- Manulife.pdf"],
-            ["Intergenerational Wealth Transfer", "Equitable", "/pdfs/Intergenerational Wealth Transfer -- Equitable.pdf"],
-            ["Corporate Estate Transfer", "Equitable", "/pdfs/Corporate Estate Transfer -- Equitable.pdf"],
-            ["Corporate Estate Transfer", "Cooperators", "/pdfs/Corporate Estate Transfer -- Cooperators.pdf"],
+            ["Wealth Transfer", "Manulife", "/pdfs/WealthTransfer-Manulife.pdf"],
+            ["RRSP Estate Preservation", "Manulife", "/pdfs/RRSPEstatePreservation-Manulife.pdf"],
+            ["Estate Bond", "Manulife", "/pdfs/EstateBond-Manulife.pdf"],
+            ["Intergenerational Wealth Transfer", "Equitable", "/pdfs/IntergenerationalWealthTransfer-Equitable.pdf"],
+            ["Corporate Estate Transfer", "Equitable", "/pdfs/CorporateEstateTransfer-Equitable.pdf"],
+            ["Corporate Estate Transfer", "Cooperators", "/pdfs/CorporateEstateTransfer-Cooperators.pdf"],
           ],
         },
         {
           title: "Retirement Planning",
           items: [
-            ["Insured Retirement", "BMO", "/pdfs/Insured Retirement -- BMO.pdf"],
-            ["Insured Retirement", "Manulife", "/pdfs/Insured Retirement -- Manulife.pdf"],
-            ["Corporate Retirement", "Equitable", "/pdfs/Corporate Retirement -- Equitable.pdf"],
+            ["Insured Retirement", "BMO", "/pdfs/InsuredRetirement-BMO.pdf"],
+            ["Insured Retirement", "Manulife", "/pdfs/InsuredRetirement-Manulife.pdf"],
+            ["Corporate Retirement", "Equitable", "/pdfs/CorporateRetirement-Equitable.pdf"],
           ],
         },
         {
           title: "Business & Corporate Planning",
           items: [
-            ["Buy Sell", "RBC", "/pdfs/Buy Sell RBC.pdf"],
-            ["Buy Sell", "Cooperators", "/pdfs/Buy Sell -- Cooperators.pdf"],
-            ["Buy Sell", "BMO", "/pdfs/Buy Sell -- BMO.pdf"],
-            ["Business Planning", "Manulife", "/pdfs/Business Planning -- Manulife.pdf"],
-            ["Immediate Financing Agreement", "RBC", "/pdfs/Immediate Financing Agreement -- RBC.pdf"],
-            ["Immediate Financing Agreement", "Cooperators", "/pdfs/Immediate Financing Agreement -- Cooperators.pdf"],
+            ["Buy Sell", "RBC", "/pdfs/BuySell-RBC.pdf"],
+            ["Buy Sell", "Cooperators", "/pdfs/BuySell-Cooperators.pdf"],
+            ["Buy Sell", "BMO", "/pdfs/BuySell-BMO.pdf"],
+            ["Business Planning", "Manulife", "/pdfs/BusinessPlanning-Manulife.pdf"],
+            ["Immediate Financing Agreement", "RBC", "/pdfs/ImmediateFinancingAgreement-RBC.pdf"],
+            ["Immediate Financing Agreement", "Cooperators", "/pdfs/ImmediateFinancingAgreement-Cooperators.pdf"],
           ],
         },
         {
           title: "Insurance Strategies",
           items: [
-            ["Life Insurance as an Asset Class", "Equitable", "/pdfs/Life insurance as an asset class -- Equitable.pdf"],
-            ["Corporate Owned Insurance", "RBC", "/pdfs/Corporate owned insurance -- RBC.pdf"],
-            ["Key Person", "Cooperators", "/pdfs/Key Person -- Cooperators.pdf"],
-            ["Secure Rental Property", "Cooperators", "/pdfs/Secure Rental Propert -- Cooperators.pdf"],
+            ["Life Insurance as an Asset Class", "Equitable", "/pdfs/LifeInsuranceAssetClass-Equitable.pdf"],
+            ["Corporate Owned Insurance", "RBC", "/pdfs/CorporateOwnedInsurance-RBC.pdf"],
+            ["Key Person", "Cooperators", "/pdfs/KeyPerson-Cooperators.pdf"],
+            ["Secure Rental Property", "Cooperators", "/pdfs/SecureRentalProperty-Cooperators.pdf"],
           ],
         },
         {
           title: "Family, Property & Giving",
           items: [
-            ["Keep Your Cottage", "Cooperators", "/pdfs/Keep your cottage  -- Cooperators.pdf"],
-            ["Keep Your Cottage", "Manulife", "/pdfs/Keep your cottage  -- Manulife.pdf"],
-            ["Charitable Giving", "Equitable", "/pdfs/Charitable Giving -- Equitable.pdf"],
-            ["Charitable Giving", "Cooperators", "/pdfs/Charitable Giving -- Cooperators.pdf"],
+            ["Keep Your Cottage", "Cooperators", "/pdfs/KeepYourCottage-Cooperators.pdf"],
+            ["Keep Your Cottage", "Manulife", "/pdfs/KeepYourCottage-Manulife.pdf"],
+            ["Charitable Giving", "Equitable", "/pdfs/CharitableGiving-Equitable.pdf"],
+            ["Charitable Giving", "Cooperators", "/pdfs/CharitableGiving-Cooperators.pdf"],
           ],
         },
         {
           title: "Checklists & Tools",
           items: [
-            ["Executor Checklist", "Empire", "/pdfs/Executor Checklist -- Empire.pdf"],
+            ["Executor Checklist", "Empire", "/pdfs/ExecutorChecklist-Empire.pdf"],
           ],
         },
       ].map((section) => (
@@ -311,21 +311,36 @@ export default function App() {
               <a
                 key={`${title}-${provider}`}
                 href={file}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="premium-card p-6 block group"
+                download
+                className="group relative block overflow-hidden rounded-[1.75rem] border border-accent/25 bg-white/[0.06] p-6 shadow-2xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-white/[0.1]"
               >
-                <p className="text-xs uppercase tracking-[0.25em] text-accent mb-3">
-                  {provider}
-                </p>
+                <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-accent/10 blur-2xl transition group-hover:bg-accent/20" />
 
-                <h3 className="text-2xl font-serif mb-4">
-                  {title}
-                </h3>
+                <div className="relative z-10 flex h-full flex-col">
+                  <div className="mb-5 flex items-center justify-between">
+                    <p className="text-xs uppercase tracking-[0.25em] text-accent">
+                      {provider}
+                    </p>
 
-                <span className="text-accent text-sm tracking-wide group-hover:tracking-widest transition-all">
-                  View PDF →
-                </span>
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full border border-accent/30 bg-primary/40 text-accent text-xs">
+                      PDF
+                    </div>
+                  </div>
+
+                  <h3 className="mb-6 text-2xl font-serif leading-snug">
+                    {title}
+                  </h3>
+
+                  <div className="mt-auto flex items-center justify-between border-t border-accent/20 pt-5">
+                    <span className="text-sm uppercase tracking-[0.2em] text-accent transition-all group-hover:tracking-[0.28em]">
+                      Download Guide
+                    </span>
+
+                    <span className="text-accent transition-transform group-hover:translate-y-1">
+                      ↓
+                    </span>
+                  </div>
+                </div>
               </a>
             ))}
           </div>
