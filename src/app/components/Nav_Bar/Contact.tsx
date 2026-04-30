@@ -37,13 +37,27 @@ export default function Contact() {
         </div>
 
         <form
-          onSubmit={(e) => e.preventDefault()}
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
           className="premium-card p-7 space-y-5"
         >
+          <input type="hidden" name="form-name" value="contact" />
+
+          <p className="hidden">
+            <label>
+              Don’t fill this out if you’re human:
+              <input name="bot-field" />
+            </label>
+          </p>
+
           <div>
             <label className="block text-sm text-accent mb-2">Name</label>
             <input
               type="text"
+              name="name"
+              required
               placeholder="Your name"
               className="w-full rounded-xl bg-white/10 border border-accent/30 px-4 py-3 text-white placeholder:text-white/40 outline-none focus:border-accent"
             />
@@ -53,6 +67,8 @@ export default function Contact() {
             <label className="block text-sm text-accent mb-2">Email</label>
             <input
               type="email"
+              name="email"
+              required
               placeholder="your@email.com"
               className="w-full rounded-xl bg-white/10 border border-accent/30 px-4 py-3 text-white placeholder:text-white/40 outline-none focus:border-accent"
             />
@@ -64,6 +80,7 @@ export default function Contact() {
             </label>
             <input
               type="tel"
+              name="phone"
               placeholder="Phone number"
               className="w-full rounded-xl bg-white/10 border border-accent/30 px-4 py-3 text-white placeholder:text-white/40 outline-none focus:border-accent"
             />
@@ -72,6 +89,8 @@ export default function Contact() {
           <div>
             <label className="block text-sm text-accent mb-2">Message</label>
             <textarea
+              name="message"
+              required
               placeholder="Tell us what you’d like help with..."
               rows={5}
               className="w-full rounded-xl bg-white/10 border border-accent/30 px-4 py-3 text-white placeholder:text-white/40 outline-none focus:border-accent resize-none"
@@ -86,7 +105,7 @@ export default function Contact() {
           </button>
 
           <p className="text-xs text-white/50 text-center">
-            Form connection can be added later. Email option works now.
+            Your inquiry will be securely submitted through the website.
           </p>
         </form>
       </div>
