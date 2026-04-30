@@ -103,10 +103,6 @@ export default function Contact() {
           >
             Submit Inquiry
           </button>
-
-          <p className="text-xs text-white/50 text-center">
-            Your inquiry will be securely submitted through the website.
-          </p>
         </form>
       </div>
     </section>
