@@ -56,12 +56,9 @@ export default function App() {
                   </span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-white/75 max-w-xl leading-relaxed mb-8">
-                  Panaca Financial helps families,
-                  professionals, and business owners reduce tax
-                  pressure, protect what matters most, and plan
-                  for multi-generational wealth.
-                </p>
+<p className="text-lg md:text-xl text-white/75 max-w-xl leading-relaxed mb-8">
+  Welcome to a world where paying less tax, ensuring your business or estate has the liquidity it needs when it matters most, and building multi-generational wealth becomes a reality.
+</p>
 
                 <div className="flex flex-wrap gap-4">
                   <button
