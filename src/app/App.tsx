@@ -384,7 +384,7 @@ export default function App() {
         page !== "corporate-life" &&
         page !== "estate-freeze" &&
         page !== "estate-preservation" && (
-          <section className="&&min-h-screen bg-primary text-primary-foreground px-6 py-24">
+          <section className="min-h-screen bg-primary text-primary-foreground px-6 py-24">
             <div className="max-w-5xl mx-auto">
               <button
                 onClick={() => setPage("services")}
