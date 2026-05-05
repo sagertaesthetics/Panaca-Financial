@@ -153,6 +153,8 @@ export default function App() {
 
       {page === "services" && <AllServices setPage={setPage} />}
 
+      {page === "estate-freeze" && (<EstateFreeze setPage={setPage} />)}
+
       {page === "resources" && (
         <section className="relative min-h-screen bg-primary text-primary-foreground px-6 py-24 overflow-hidden">
           <div className="soft-orb top-20 left-10 w-40 h-40" />
