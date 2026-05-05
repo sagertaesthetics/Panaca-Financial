@@ -14,6 +14,7 @@ import CharitableGiving from "./components/Services/CharitableGiving";
 import CorporateTax from "./components/Services/CorporateTax";
 import CDA from "./components/Services/CDA";
 import CorporateLifeInsurance from "./components/Services/CorporateLifeInsurance";
+import EstateFreeze from "./components/Services/EstateFreeze";
 
 type Page =
   | "home"
