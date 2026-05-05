@@ -20,6 +20,7 @@ type Page =
   | "home"
   | "services"
   | "estate-preservation"
+  | "estate-freeze"
   | "charitable-giving"
   | "buy-sell"
   | "corporate-life"
