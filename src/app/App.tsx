@@ -51,9 +51,6 @@ export default function App() {
 
                 <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-6">
                   Keep more of your money.
-                  <span className="block text-accent">
-                    Build more of your future.
-                  </span>
                 </h1>
 
 <p className="text-lg md:text-xl text-white/75 max-w-xl leading-relaxed mb-8">
