@@ -183,7 +183,7 @@ export default function EstateFreeze({ setPage }: any) {
           </p>
 
           <button
-            onClick={() => setPage("contact")}
+            onClick={() => setPage("estate-preservation")}
             className="px-8 py-3 rounded-full bg-accent text-primary hover:opacity-90 transition"
           >
             Contact Panaca Financial
