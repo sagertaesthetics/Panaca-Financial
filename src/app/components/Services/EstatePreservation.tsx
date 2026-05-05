@@ -83,19 +83,25 @@ export default function EstatePreservation({ setPage }: any) {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-6 items-stretch">
-          <div className="premium-card p-8">
-            <h2 className="text-3xl font-serif mb-4 text-accent">
-              Advanced Strategies
-            </h2>
+<div
+  onClick={() => setPage("estate-freeze")}
+  className="premium-card p-8 cursor-pointer group transition-all hover:-translate-y-1"
+>
+  <h2 className="text-3xl font-serif mb-4 text-accent">
+    Advanced Strategies
+  </h2>
 
-            <p className="text-white/75 leading-relaxed">
-              For owners of private corporations, strategies such as an estate
-              freeze can lock in today’s value of your company while allowing
-              future growth to pass to the next generation in a tax-efficient
-              manner.
-            </p>
-          </div>
+  <p className="text-white/75 leading-relaxed mb-6">
+    For owners of private corporations, strategies such as an estate
+    freeze can lock in today’s value of your company while allowing
+    future growth to pass to the next generation in a tax-efficient
+    manner.
+  </p>
+
+  <span className="text-accent text-sm tracking-wide group-hover:tracking-widest transition-all">
+    Learn More About Estate Freeze Planning →
+  </span>
+</div>
 
           <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-8 flex flex-col justify-between">
             <div>
