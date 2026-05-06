@@ -22,81 +22,122 @@ export default function CharitableGiving({ setPage }: any) {
           </h1>
 
           <p className="text-white/75 text-lg leading-relaxed max-w-4xl">
-            Charitable giving can help you leave a meaningful legacy while also
-            reducing taxes on a terminal tax return.
+            Charitable giving can help create a meaningful legacy while also
+            providing potential tax advantages for individuals, families, and
+            estates.
           </p>
         </div>
 
         <div className="premium-card p-8 mb-16">
           <h2 className="text-3xl font-serif text-accent mb-4">
-            Charitable Donations at Death
+            Charitable Giving Through Life Insurance
           </h2>
 
           <p className="text-white/75 leading-relaxed">
-            Charitable donations on a terminal tax return in Canada can
-            significantly reduce taxes. In the year of death and the preceding
-            year, up to 100% of net income may be claimable.
+            In Canada, charitable giving through life insurance can be structured
+            in several ways, each offering unique benefits and planning
+            considerations. These strategies may help support charitable causes
+            while also improving tax efficiency.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 mb-16">
+        <div className="grid lg:grid-cols-3 gap-6 mb-16">
           <div className="premium-card p-8">
-            <h2 className="text-3xl font-serif text-accent mb-4">
-              Bequest of Policy Proceeds
+            <h2 className="text-2xl font-serif text-accent mb-4">
+              Naming a Charity as Beneficiary
             </h2>
-
-            <p className="text-white/75 leading-relaxed mb-4">
-              An individual can donate life insurance proceeds through their
-              Will. The individual owns the policy during their lifetime, and
-              the estate is named as the beneficiary.
-            </p>
 
             <p className="text-white/75 leading-relaxed">
-              The Will can direct that an amount equal to the insurance proceeds
-              be paid to a named charity after death.
+              A charity can be named as the beneficiary of a life insurance
+              policy, allowing the charity to receive the death benefit upon the
+              policyholder’s passing. The estate may receive a charitable tax
+              receipt that can help offset the terminal tax bill.
             </p>
           </div>
 
           <div className="premium-card p-8">
-            <h2 className="text-3xl font-serif text-accent mb-4">
-              Considerations
+            <h2 className="text-2xl font-serif text-accent mb-4">
+              Transferring Ownership of a Policy
             </h2>
 
-            <div className="space-y-4 text-white/75">
-              <p>Insurance proceeds pass through the estate.</p>
-              <p>Funds may be subject to probate fees where applicable.</p>
-              <p>Funds may be exposed to creditor claims or estate litigation.</p>
-              <p>Donor confidentiality may not be protected.</p>
-              <p>The donor keeps full control of the policy during life.</p>
-            </div>
+            <p className="text-white/75 leading-relaxed">
+              An existing policy that is no longer required for family protection
+              may be transferred to a charity. In this structure, the charity
+              becomes the owner and receives the death benefit directly.
+            </p>
+          </div>
+
+          <div className="premium-card p-8">
+            <h2 className="text-2xl font-serif text-accent mb-4">
+              Purchasing a New Policy
+            </h2>
+
+            <p className="text-white/75 leading-relaxed">
+              A new life insurance policy can be created specifically for
+              charitable purposes, with the structure tailored to the donor’s
+              goals, financial situation, and estate planning strategy.
+            </p>
+          </div>
+        </div>
+
+        <div className="premium-card p-8 mb-16">
+          <h2 className="text-3xl font-serif text-accent mb-6">
+            Potential Benefits
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              "Potential charitable donation tax credits",
+              "May help offset taxes on the terminal tax return",
+              "Creates a lasting charitable legacy",
+              "Can improve estate planning efficiency",
+              "Allows larger charitable gifts using leveraged dollars",
+              "Supports causes that are important to the donor and family",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-accent/25 bg-white/5 p-5 text-white/75"
+              >
+                {item}
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="premium-card p-8 mb-16">
           <h2 className="text-3xl font-serif text-accent mb-4">
-            Donor-Owned Policy with Charity as Beneficiary
+            Important Considerations
           </h2>
 
-          <p className="text-white/75 leading-relaxed">
-            If a donor owns a policy and names a charity as the beneficiary,
-            they generally will not receive a charitable donation tax credit for
-            premiums paid. However, a charitable donation tax credit can arise
-            on death.
+          <p className="text-white/75 leading-relaxed mb-6">
+            Every charitable giving strategy should be aligned with broader
+            financial, tax, and estate planning goals. The right structure will
+            depend on the donor’s intentions, family priorities, and long-term
+            planning objectives.
           </p>
+
+          <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-6">
+            <p className="text-white/80 leading-relaxed">
+              Professional financial, legal, and tax advice is essential to help
+              ensure charitable giving strategies are structured properly and
+              integrated into the overall estate plan.
+            </p>
+          </div>
         </div>
 
         <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-8">
           <p className="uppercase tracking-[0.35em] text-accent mb-4">
-            Result
+            Legacy Planning
           </p>
 
           <h2 className="text-3xl md:text-4xl font-serif mb-4">
-            Increase donation. Decrease taxes.
+            Increase your impact. Improve tax efficiency.
           </h2>
 
-          <p className="text-white/75 mb-8 max-w-3xl">
-            Your favourite charities can receive a significant donation while
-            the corresponding donation helps reduce your final tax bill.
+          <p className="text-white/75 mb-8 max-w-3xl leading-relaxed">
+            Strategic charitable giving may allow your favourite causes to
+            receive significant support while also helping reduce taxes and
+            preserve more wealth for your estate and beneficiaries.
           </p>
 
           <button
