@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { faqSections } from "../Config_Files/FAQConfig";
 
-export default function FAQPage() {
+export default function FAQPage({ setPage }: any) {
   const [activeSection, setActiveSection] = useState(faqSections[0]);
 
   return (
@@ -9,25 +9,25 @@ export default function FAQPage() {
       <div className="soft-orb top-20 left-10 w-40 h-40" />
       <div className="soft-orb bottom-20 right-10 w-56 h-56" />
 
-<div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <button
+          onClick={() => setPage("resources")}
+          className="mb-10 text-accent hover:underline"
+        >
+          ← Back to Resources
+        </button>
 
-  <button
-    onClick={() => window.history.back()}
-    className="mb-10 text-accent hover:underline"
-  >
-    ← Back to Resources
-  </button>
-
-  <p className="uppercase tracking-[0.35em] text-accent mb-4">
-    Resources
-  </p>
+        <p className="uppercase tracking-[0.35em] text-accent mb-4">
+          Resources
+        </p>
 
         <h1 className="text-5xl md:text-7xl font-serif text-accent mb-6">
           FAQ
         </h1>
 
         <p className="text-white/75 max-w-3xl mb-12">
-          Choose a topic to view common questions.
+          Choose a topic to explore common questions about tax planning,
+          estate preservation, corporate strategies, and legacy planning.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
@@ -35,7 +35,7 @@ export default function FAQPage() {
             <button
               key={section.title}
               onClick={() => setActiveSection(section)}
-              className={`text-left premium-card p-6 transition ${
+              className={`text-left premium-card p-6 transition-all hover:-translate-y-1 ${
                 activeSection.title === section.title
                   ? "border-accent bg-accent/10"
                   : ""
