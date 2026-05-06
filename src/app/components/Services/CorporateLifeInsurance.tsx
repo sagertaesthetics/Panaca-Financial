@@ -73,24 +73,6 @@ export default function CorporateLifeInsurance({ setPage }: any) {
         </div>
 
         <div className="premium-card p-8 mb-16">
-          <h2 className="text-3xl font-serif text-accent mb-4">
-            Considerations
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-4 text-white/75">
-            <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-              No creditor protection in most cases
-            </div>
-            <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-              Complex tax rules requiring professional advice
-            </div>
-            <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-              Funds remain within the corporate structure
-            </div>
-          </div>
-        </div>
-
-        <div className="premium-card p-8 mb-16">
           <h2 className="text-3xl font-serif text-accent mb-6">
             Accessing Cash Inside the Policy
           </h2>
@@ -103,7 +85,7 @@ export default function CorporateLifeInsurance({ setPage }: any) {
           <div className="grid md:grid-cols-3 gap-4 text-white/75">
             <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
               <strong className="text-white">Policy Loans:</strong> Borrow
-              directly from the insurer using the policy as collateral.
+              directly from the insurance company.
             </div>
 
             <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
