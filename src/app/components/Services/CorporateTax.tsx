@@ -64,41 +64,64 @@ export default function CorporateTax({ setPage }: any) {
           ))}
         </div>
 
-        <div className="premium-card p-8 mb-16">
-          <h2 className="text-3xl font-serif text-accent mb-4">
-            Tax Impact of Losing the Small Business Deduction
-          </h2>
+<div className="premium-card p-8 mb-16">
+  <h2 className="text-3xl font-serif text-accent mb-4">
+    Tax Impact of Losing the Small Business Deduction
+  </h2>
 
-          <p className="text-white/75 leading-relaxed mb-6">
-            If passive income fully claws back the Small Business Deduction,
-            active business income may be taxed at the higher general corporate
-            rate. On the first $500,000 of active income, this can create a
-            significant additional annual tax cost.
-          </p>
+  <p className="text-white/75 leading-relaxed mb-6">
+    Once passive income becomes too high, the Small Business Deduction may be
+    reduced or eliminated entirely. This means the corporation may lose access
+    to the lower small business tax rate on active business income.
+  </p>
 
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-              <p className="text-accent font-serif text-xl mb-2">$61,000</p>
-              <p className="text-white/70">
-                Tax on $500,000 at 12.2%
-              </p>
-            </div>
+  <div className="grid md:grid-cols-3 gap-4 mb-8">
+    <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
+      <p className="text-accent font-serif text-xl mb-2">$61,000</p>
 
-            <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-              <p className="text-accent font-serif text-xl mb-2">$132,500</p>
-              <p className="text-white/70">
-                Tax on $500,000 at 26.5%
-              </p>
-            </div>
+      <p className="text-white/70 mb-3">
+        Tax on $500,000 at 12.2%
+      </p>
 
-            <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-              <p className="text-accent font-serif text-xl mb-2">$71,500</p>
-              <p className="text-white/70">
-                Additional tax owing annually
-              </p>
-            </div>
-          </div>
-        </div>
+      <p className="text-sm text-white/50">
+        $500,000 × 12.2%
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
+      <p className="text-accent font-serif text-xl mb-2">$132,500</p>
+
+      <p className="text-white/70 mb-3">
+        Tax on $500,000 at 26.5%
+      </p>
+
+      <p className="text-sm text-white/50">
+        $500,000 × 26.5%
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
+      <p className="text-accent font-serif text-xl mb-2">$71,500</p>
+
+      <p className="text-white/70 mb-3">
+        Additional annual tax owing
+      </p>
+
+      <p className="text-sm text-white/50">
+        $132,500 − $61,000
+      </p>
+    </div>
+  </div>
+
+  <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-6">
+    <p className="text-white/80 leading-relaxed">
+      In this example, excessive passive income causes the Small Business
+      Deduction to be fully clawed back, resulting in approximately $71,500 in
+      additional annual corporate tax on the first $500,000 of active business
+      income alone.
+    </p>
+  </div>
+</div>
 
         <div className="premium-card p-8 mb-16">
           <h2 className="text-3xl font-serif text-accent mb-4">
