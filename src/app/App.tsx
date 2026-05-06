@@ -2,10 +2,7 @@ import { useState } from "react";
 import logoMark from "./components/Assets/Panaca_Mark.png";
 import NavBar from "./components/Nav_Bar/Nav_Bar";
 import Contact from "./components/Nav_Bar/Contact";
-import {
-  ownerEmail,
-  services,
-} from "./components/Config_Files/ServiceConfigs";
+import {ownerEmail,services,} from "./components/Config_Files/ServiceConfigs";
 import AllServices from "./components/Services/All_Services";
 import FAQPage from "./components/Services/FAQ";
 import EstatePreservation from "./components/Services/EstatePreservation";
