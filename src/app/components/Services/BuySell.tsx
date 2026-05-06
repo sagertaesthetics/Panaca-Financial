@@ -20,10 +20,6 @@ export default function BuySell({ setPage }: any) {
           <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-6">
             Buy-Sell Planning
           </h1>
-
-          <p className="text-white/75 text-lg leading-relaxed max-w-4xl">
-          Insuring your corporation has enough moneyto purchase shares of a partner should they no longer be able to work in the business
-          </p>
         </div>
 
         <div className="premium-card p-8 mb-16">
