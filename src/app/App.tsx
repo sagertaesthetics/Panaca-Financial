@@ -7,7 +7,7 @@ import {
   services,
 } from "./components/Config_Files/ServiceConfigs";
 import AllServices from "./components/Services/All_Services";
-import FAQPage from "./components/Nav_Bar/FAQ";
+import FAQPage from "./components/Services/FAQ";
 import EstatePreservation from "./components/Services/EstatePreservation";
 import BuySell from "./components/Services/BuySell";
 import CharitableGiving from "./components/Services/CharitableGiving";
