@@ -23,8 +23,7 @@ export default function CDA({ setPage }: any) {
         <p className="text-white/75 text-lg leading-relaxed max-w-4xl mb-16">
           A Capital Dividend Account (CDA) is a notional, cumulative tax account
           used by private Canadian corporations to track certain tax-free
-          surpluses and distribute them to Canadian resident shareholders as
-          tax-free dividends.
+          surpluses and distribute cash to residential shareholders as tax free.
         </p>
 
         <div className="premium-card p-8 mb-16">
@@ -46,40 +45,6 @@ export default function CDA({ setPage }: any) {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6 mb-16">
-          <div className="premium-card p-7">
-            <h3 className="text-2xl font-serif text-accent mb-4">
-              Purpose
-            </h3>
-            <p className="text-white/75">
-              The CDA helps support tax integration by allowing certain tax-free
-              amounts received by a corporation to be passed to shareholders
-              without additional taxation.
-            </p>
-          </div>
-
-          <div className="premium-card p-7">
-            <h3 className="text-2xl font-serif text-accent mb-4">
-              What It Tracks
-            </h3>
-            <p className="text-white/75">
-              It tracks items such as the non-taxable portion of capital gains
-              and losses, life insurance proceeds, and capital dividends from
-              other corporations.
-            </p>
-          </div>
-
-          <div className="premium-card p-7">
-            <h3 className="text-2xl font-serif text-accent mb-4">
-              Not a Bank Account
-            </h3>
-            <p className="text-white/75">
-              The CDA is a notional tax account for tracking purposes. It is not
-              a physical account holding cash.
-            </p>
-          </div>
-        </div>
-
         <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-8">
           <h2 className="text-3xl md:text-4xl font-serif mb-4">
             Extract corporate cash more efficiently.
@@ -87,7 +52,7 @@ export default function CDA({ setPage }: any) {
 
           <div className="grid md:grid-cols-2 gap-4 text-white/75 mb-8">
             {[
-              "Provides one of the most efficient ways to extract eligible cash without personal tax",
+              "Provides one of the most efficient ways to dsitribute cash inside a company tax free",
               "CDA balance should be verified before distribution",
               "Timing and filing matter",
               "Processing and confirmation can take several months",
