@@ -22,8 +22,7 @@ export default function BuySell({ setPage }: any) {
           </h1>
 
           <p className="text-white/75 text-lg leading-relaxed max-w-4xl">
-            Protect your business and your partners from the unexpected with a
-            properly structured and funded buy-sell agreement.
+          Insuring your corporation has enough moneyto purchase shares of a partner should they no longer be able to work in the business
           </p>
         </div>
 
