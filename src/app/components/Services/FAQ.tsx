@@ -9,10 +9,18 @@ export default function FAQPage() {
       <div className="soft-orb top-20 left-10 w-40 h-40" />
       <div className="soft-orb bottom-20 right-10 w-56 h-56" />
 
-      <div className="relative z-10 max-w-6xl mx-auto">
-        <p className="uppercase tracking-[0.35em] text-accent mb-4">
-          Resources
-        </p>
+<div className="relative z-10 max-w-6xl mx-auto">
+
+  <button
+    onClick={() => window.history.back()}
+    className="mb-10 text-accent hover:underline"
+  >
+    ← Back to Resources
+  </button>
+
+  <p className="uppercase tracking-[0.35em] text-accent mb-4">
+    Resources
+  </p>
 
         <h1 className="text-5xl md:text-7xl font-serif text-accent mb-6">
           FAQ
