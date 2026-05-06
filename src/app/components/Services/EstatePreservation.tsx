@@ -23,9 +23,7 @@ export default function EstatePreservation({ setPage }: any) {
             </h1>
 
             <p className="text-white/75 text-lg leading-relaxed max-w-3xl">
-              Help ensure your estate has liquidity when it is needed most,
-              especially for taxes on capital gains, secondary properties, or
-              private corporation shares.
+              Help ensure your estate has enough liquidity when it is needed most
             </p>
           </div>
 
