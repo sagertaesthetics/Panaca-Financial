@@ -32,10 +32,7 @@ export default function EstatePreservation({ setPage }: any) {
               What is estate planning?
             </h2>
             <p className="text-white/75 leading-relaxed">
-              Estate planning determines how your wealth will be protected,
-              managed, and distributed during your lifetime and after. It goes
-              beyond a will — it creates a strategy that reflects your values,
-              secures your legacy, and supports your loved ones.
+              Estate planning is all about getting your possessions to whom you wish with as little hassle and tax as possible.
             </p>
           </div>
         </div>
