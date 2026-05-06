@@ -345,7 +345,7 @@ export default function App() {
   </section>
 )}
 
-      {page === "faq" && <FAQPage />}
+      {page === "faq" && <FAQPage setPage={setPage} />}
 
       {page === "cda" && <CDA setPage={setPage} />}
 
