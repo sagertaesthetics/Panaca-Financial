@@ -21,11 +21,12 @@ export default function BuySell({ setPage }: any) {
             Buy-Sell Planning
           </h1>
 
-          <p className="text-white/75 text-lg leading-relaxed max-w-4xl">
-        Most partnerships run smoothly until something unexpected happens — such as sickness, injury, or the death of a partner. Without proper planning, 
-        including a buy-sell agreement and funding to support it, many businesses may face the possibility of having a new partner the remaining owners 
-        have no say in.    
-        </div>
+<p className="text-white/75 text-lg leading-relaxed max-w-4xl">
+  Most partnerships run smoothly until something unexpected happens — such as sickness, injury, or the death of a partner. Without proper planning,
+  including a buy-sell agreement and funding to support it, many businesses may face the possibility of having a new partner the remaining owners
+  have no say in.
+</p>
+</div>
 
         <div className="premium-card p-8 mb-16">
           <h2 className="text-3xl font-serif text-accent mb-4">
