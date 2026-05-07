@@ -23,7 +23,7 @@ export default function CDA({ setPage }: any) {
         <p className="text-white/75 text-lg leading-relaxed max-w-4xl mb-16">
           A Capital Dividend Account (CDA) is a notional, cumulative tax account
           used by private Canadian corporations to track certain tax-free
-          surpluses and distribute cash to residential shareholders as tax free.
+          surpluses and distribute cash to residential shareholders as tax free income after tax.
         </p>
 
         <div className="premium-card p-8 mb-16">
