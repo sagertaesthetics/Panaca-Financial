@@ -1,6 +1,17 @@
 import { useState } from "react";
 import { faqSections } from "../Config_Files/FAQConfig";
 
+const serviceLinks: Record<string, string> = {
+  "Estate Planning": "estate-preservation",
+  "Estate Preservation": "estate-preservation",
+  "Corporate Tax Planning": "taxes",
+  "Capital Dividend Account": "cda",
+  "Corporate Owned Life Insurance": "corporate-life",
+  "Buy Sell Planning": "buy-sell",
+  "Charitable Giving": "charitable-giving",
+  "Estate Freeze": "estate-freeze",
+};
+
 export default function FAQPage({ setPage }: any) {
   const [activeSection, setActiveSection] = useState(faqSections[0]);
 
@@ -45,9 +56,21 @@ export default function FAQPage({ setPage }: any) {
                 {section.title}
               </h2>
 
-              <p className="text-white/60 text-sm">
+              <p className="text-white/60 text-sm mb-5">
                 {section.faqs.length} questions
               </p>
+
+              {serviceLinks[section.title] && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setPage(serviceLinks[section.title]);
+                  }}
+                  className="px-4 py-2 rounded-full border border-accent/30 bg-white/5 text-white/75 hover:bg-accent/10 hover:text-white transition text-sm"
+                >
+                  Learn More →
+                </button>
+              )}
             </button>
           ))}
         </div>
