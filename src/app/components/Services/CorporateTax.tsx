@@ -24,8 +24,7 @@ export default function CorporateTax({ setPage }: any) {
         </h1>
 
         <p className="text-white/75 text-lg leading-relaxed max-w-4xl mb-16">
-          Many successful businesses have excess cash trapped inside their
-          corporation that cannot easily be withdrawn without tax consequences.
+          Many successful businesses have excess cash trapped inside their corporation that cannot easily be withdrawn without significant tax consequences.
           While investing surplus cash inside the corporation may seem logical,
           passive investments can create serious tax issues.
         </p>
@@ -40,7 +39,7 @@ export default function CorporateTax({ setPage }: any) {
             {
               title: "2. Small Business Deduction Grind Down",
               text:
-                "Once passive income exceeds $50,000, the corporation begins losing access to the Small Business Deduction. At $150,000+ of passive income, the deduction is fully eliminated.",
+                " Small Business Deduction Grind Down  change it to:  Once passive income exceeds $50,000, the corporation begins losing access to the Small Business Deduction. At $150,000+ of passive income, the small business deduction is fully eliminated, causing your corporation to pay more corporate tax than necessary.",
             },
             {
               title: "3. Loss of Lifetime Capital Gains Exemption",
@@ -78,7 +77,7 @@ export default function CorporateTax({ setPage }: any) {
  <div className="grid md:grid-cols-3 gap-4 mb-8">
   <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
     <p className="text-white/70 mb-3">
-      Tax on $500,000 at 12.2%
+      Tax on $500,000 business revenue at 12.2%
     </p>
 
     <p className="text-sm text-white/50 mb-2">
@@ -90,10 +89,9 @@ export default function CorporateTax({ setPage }: any) {
     </p>
   </div>
 
-  <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-    <p className="text-white/70 mb-3">
-      Tax on $500,000 at 26.5%
-    </p>
+<p className="text-white/70 mb-3">
+  Tax on $500,000 business revenue at 26.5%
+</p>
 
     <p className="text-sm text-white/50 mb-2">
       $500,000 × 26.5%
