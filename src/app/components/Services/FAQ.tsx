@@ -1,26 +1,34 @@
 import { useState } from "react";
 import { faqSections } from "../Config_Files/FAQConfig";
 
-const serviceLinks: Record<string, string> = {
-  "Estate Planning": "estate-preservation",
-  "Estate Preservation": "estate-preservation",
+function getServiceLink(title: string) {
+  const cleanTitle = title.toLowerCase();
 
-  "Charitable Giving": "charitable-giving",
+  if (cleanTitle.includes("estate")) return "estate-preservation";
 
-  "Buy Sell Planning": "buy-sell",
-  "Buy-Sell Planning": "buy-sell",
-  "Buy Sell": "buy-sell",
+  if (cleanTitle.includes("charitable"))
+    return "charitable-giving";
 
-  "Corporate Owned Life Insurance": "corporate-life",
-  "Corporate Life Insurance": "corporate-life",
+  if (cleanTitle.includes("buy"))
+    return "buy-sell";
 
-"Capital Dividend Account": "cda",
-"Capital Dividends Account": "cda",
-"CDA": "cda",
+  if (
+    cleanTitle.includes("corporate owned") ||
+    cleanTitle.includes("life insurance")
+  )
+    return "corporate-life";
 
-  "Corporate Tax Planning": "taxes",
-  "Corporate Tax": "taxes",
-};
+  if (
+    cleanTitle.includes("capital dividend") ||
+    cleanTitle.includes("cda")
+  )
+    return "cda";
+
+  if (cleanTitle.includes("tax"))
+    return "taxes";
+
+  return null;
+}
 
 export default function FAQPage({ setPage }: any) {
   const [activeSection, setActiveSection] = useState(faqSections[0]);
@@ -81,11 +89,11 @@ export default function FAQPage({ setPage }: any) {
                 {section.faqs.length} questions
               </p>
 
-              {serviceLinks[section.title] && (
+              {getServiceLink(section.title) && (
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    setPage(serviceLinks[section.title]);
+                    setPage(getServiceLink(section.title));
                   }}
                   className="px-4 py-2 rounded-full border border-accent/30 bg-white/5 text-white/75 hover:bg-accent/10 hover:text-white transition text-sm"
                 >
