@@ -23,7 +23,7 @@ export default function CharitableGiving({ setPage }: any) {
 
           <p className="text-white/75 text-lg leading-relaxed max-w-4xl">
             Charitable giving can help create a meaningful legacy while also
-            providing potential tax advantages for individuals, families, and
+            providing tax advantages for individuals, families, and
             estates.
           </p>
         </div>
@@ -82,12 +82,12 @@ export default function CharitableGiving({ setPage }: any) {
 
         <div className="premium-card p-8 mb-16">
           <h2 className="text-3xl font-serif text-accent mb-6">
-            Potential Benefits
+            Benefits
           </h2>
 
           <div className="grid md:grid-cols-2 gap-5">
             {[
-              "Potential charitable donation tax credits",
+              "Charitable donation tax credits",
               "May help offset taxes on the terminal tax return",
               "Creates a lasting charitable legacy",
               "Can improve estate planning efficiency",
