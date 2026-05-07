@@ -14,8 +14,9 @@ const serviceLinks: Record<string, string> = {
   "Corporate Owned Life Insurance": "corporate-life",
   "Corporate Life Insurance": "corporate-life",
 
-  "Capital Dividend Account": "cda",
-  "CDA": "cda",
+"Capital Dividend Account": "cda",
+"Capital Dividends Account": "cda",
+"CDA": "cda",
 
   "Corporate Tax Planning": "taxes",
   "Corporate Tax": "taxes",
