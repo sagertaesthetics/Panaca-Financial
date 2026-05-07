@@ -102,7 +102,7 @@ export default function CorporateLifeInsurance({ setPage }: any) {
 
         <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-8">
           <h2 className="text-3xl md:text-4xl font-serif mb-4">
-            Turn corporate cash into long-term tax efficiency.
+            Turn corporate cash into a long-term personal asset while improving tax efficiency.
           </h2>
 
           <p className="text-white/75 mb-8 max-w-3xl">
