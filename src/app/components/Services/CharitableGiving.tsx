@@ -88,7 +88,7 @@ export default function CharitableGiving({ setPage }: any) {
           <div className="grid md:grid-cols-2 gap-5">
             {[
               "Charitable donation tax credits",
-              "May help offset taxes on the terminal tax return",
+              "Help offset taxes on the terminal tax return",
               "Creates a lasting charitable legacy",
               "Can improve estate planning efficiency",
               "Allows larger charitable gifts using leveraged dollars",
