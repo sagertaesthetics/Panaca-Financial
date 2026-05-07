@@ -47,7 +47,7 @@ export default function CDA({ setPage }: any) {
 
         <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-8">
           <h2 className="text-3xl md:text-4xl font-serif mb-4">
-            Extract corporate cash more efficiently.
+            Get corporate cash trapped inside a business into your estate or heirs hands tax efficiently.
           </h2>
 
           <div className="grid md:grid-cols-2 gap-4 text-white/75 mb-8">
