@@ -4,12 +4,21 @@ import { faqSections } from "../Config_Files/FAQConfig";
 const serviceLinks: Record<string, string> = {
   "Estate Planning": "estate-preservation",
   "Estate Preservation": "estate-preservation",
-  "Corporate Tax Planning": "taxes",
-  "Capital Dividend Account": "cda",
-  "Corporate Owned Life Insurance": "corporate-life",
-  "Buy Sell Planning": "buy-sell",
+
   "Charitable Giving": "charitable-giving",
-  "Estate Freeze": "estate-freeze",
+
+  "Buy Sell Planning": "buy-sell",
+  "Buy-Sell Planning": "buy-sell",
+  "Buy Sell": "buy-sell",
+
+  "Corporate Owned Life Insurance": "corporate-life",
+  "Corporate Life Insurance": "corporate-life",
+
+  "Capital Dividend Account": "cda",
+  "CDA": "cda",
+
+  "Corporate Tax Planning": "taxes",
+  "Corporate Tax": "taxes",
 };
 
 export default function FAQPage({ setPage }: any) {
