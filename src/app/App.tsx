@@ -102,41 +102,48 @@ export default function App() {
 
           <div className="gold-divider" />
 
-          <section className="relative overflow-hidden px-6 py-24 bg-primary text-primary-foreground">
-            <div className="relative z-10 max-w-7xl mx-auto">
-              <p className="uppercase tracking-[0.35em] text-accent mb-4">
-                Services
-              </p>
+     <section className="relative overflow-hidden px-6 py-24 bg-primary text-primary-foreground">
+  <div className="relative z-10 max-w-7xl mx-auto">
+    <p className="uppercase tracking-[0.35em] text-accent mb-4">
+      Services
+    </p>
 
-              <h2 className="text-4xl md:text-6xl font-serif mb-10">
-                Keep more. Protect more.
-                <span className="block text-accent">
-                  Pass on more.
-                </span>
-              </h2>
-
-<div className="grid md:grid-cols-3 gap-6">
-  {services.map((s) => (
-    <button
-      key={s.id}
-      onClick={() => setPage(s.id as Page)}
-      className="group text-left premium-card p-7"
-    >
-      <h3 className="text-2xl font-serif text-accent mb-4">
-        {s.title}
-      </h3>
-      <p className="text-white/75 leading-relaxed mb-6">
-        {s.short}
-      </p>
-      <span className="text-accent text-sm tracking-wide group-hover:tracking-widest transition-all">
-        Learn More →
+    <h2 className="text-4xl md:text-6xl font-serif mb-10">
+      Keep more. Protect more.
+      <span className="block text-accent">
+        Pass on more.
       </span>
-    </button>
-  ))}
-</div>
-            </div>
-          </section>
+    </h2>
 
+    <div className="grid md:grid-cols-3 gap-6">
+      {services.map((s) => (
+        <button
+          key={s.id}
+          onClick={() => setPage(s.id as Page)}
+          className="group text-left premium-card p-7"
+        >
+          <img
+            src={serviceImages[s.id]}
+            alt={s.title}
+            className="w-full h-56 object-cover rounded-2xl mb-6"
+          />
+
+          <h3 className="text-2xl font-serif text-accent mb-4">
+            {s.title}
+          </h3>
+
+          <p className="text-white/75 leading-relaxed mb-6">
+            {s.short}
+          </p>
+
+          <span className="text-accent text-sm tracking-wide group-hover:tracking-widest transition-all">
+            Learn More →
+          </span>
+        </button>
+      ))}
+    </div>
+  </div>
+</section>
           <div className="gold-divider" />
 
           <section className="px-6 py-24 bg-primary text-primary-foreground">
