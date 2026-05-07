@@ -13,6 +13,22 @@ import CDA from "./components/Services/CDA";
 import CorporateLifeInsurance from "./components/Services/CorporateLifeInsurance";
 import EstateFreeze from "./components/Services/EstateFreeze";
 
+import BuySellImg from "./components/Assets/BuySell.jpg";
+import CDAImg from "./components/Assets/CDA.jpg";
+import CharitableGivingImg from "./components/Assets/CharitableGiving.jpg";
+import ColiImg from "./components/Assets/Coli.jpg";
+import CorporateTaxPlanningImg from "./components/Assets/CorporateTaxPlanning.jpg";
+import EstatePreservationImg from "./components/Assets/EstatePreservation.jpg";
+
+const serviceImages: Record<string, string> = {
+  "estate-preservation": EstatePreservationImg,
+  "charitable-giving": CharitableGivingImg,
+  "buy-sell": BuySellImg,
+  "corporate-life": ColiImg,
+  cda: CDAImg,
+  taxes: CorporateTaxPlanningImg,
+};
+
 type Page =
   | "home"
   | "services"
@@ -99,25 +115,25 @@ export default function App() {
                 </span>
               </h2>
 
-              <div className="grid md:grid-cols-3 gap-6">
-                {services.map((s) => (
-                  <button
-                    key={s.id}
-                    onClick={() => setPage(s.id as Page)}
-                    className="group text-left premium-card p-7"
-                  >
-                    <h3 className="text-2xl font-serif text-accent mb-4">
-                      {s.title}
-                    </h3>
-                    <p className="text-white/75 leading-relaxed mb-6">
-                      {s.short}
-                    </p>
-                    <span className="text-accent text-sm tracking-wide group-hover:tracking-widest transition-all">
-                      Learn More →
-                    </span>
-                  </button>
-                ))}
-              </div>
+<div className="grid md:grid-cols-3 gap-6">
+  {services.map((s) => (
+    <button
+      key={s.id}
+      onClick={() => setPage(s.id as Page)}
+      className="group text-left premium-card p-7"
+    >
+      <h3 className="text-2xl font-serif text-accent mb-4">
+        {s.title}
+      </h3>
+      <p className="text-white/75 leading-relaxed mb-6">
+        {s.short}
+      </p>
+      <span className="text-accent text-sm tracking-wide group-hover:tracking-widest transition-all">
+        Learn More →
+      </span>
+    </button>
+  ))}
+</div>
             </div>
           </section>
 
