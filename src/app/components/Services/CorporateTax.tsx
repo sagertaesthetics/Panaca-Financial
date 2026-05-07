@@ -23,11 +23,35 @@ export default function CorporateTax({ setPage }: any) {
           </span>
         </h1>
 
-        <p className="text-white/75 text-lg leading-relaxed max-w-4xl mb-16">
-          Many successful businesses have excess cash trapped inside their corporation that cannot easily be withdrawn without significant tax consequences.
-          While investing surplus cash inside the corporation may seem logical,
-          passive investments can create serious tax issues.
+        <p className="text-white/75 text-lg leading-relaxed max-w-4xl mb-10">
+          Many successful businesses have excess cash trapped inside their
+          corporation that cannot easily be withdrawn without significant tax
+          consequences. While investing surplus cash inside the corporation may
+          seem logical, passive investments can create serious tax issues.
         </p>
+
+        <div className="flex flex-wrap gap-4 mb-16">
+          <a
+            href="#small-business-deduction"
+            className="px-5 py-2 rounded-full border border-accent/30 bg-white/5 text-white/75 hover:bg-accent/10 hover:text-white transition"
+          >
+            Small Business Deduction
+          </a>
+
+          <a
+            href="#lifetime-capital-gains"
+            className="px-5 py-2 rounded-full border border-accent/30 bg-white/5 text-white/75 hover:bg-accent/10 hover:text-white transition"
+          >
+            Lifetime Capital Gains
+          </a>
+
+          <a
+            href="#double-taxation"
+            className="px-5 py-2 rounded-full border border-accent/30 bg-white/5 text-white/75 hover:bg-accent/10 hover:text-white transition"
+          >
+            Double Taxation
+          </a>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-6 mb-16">
           {[
@@ -39,7 +63,7 @@ export default function CorporateTax({ setPage }: any) {
             {
               title: "2. Small Business Deduction Grind Down",
               text:
-                " Small Business Deduction Grind Down  change it to:  Once passive income exceeds $50,000, the corporation begins losing access to the Small Business Deduction. At $150,000+ of passive income, the small business deduction is fully eliminated, causing your corporation to pay more corporate tax than necessary.",
+                "Once passive income exceeds $50,000, the corporation begins losing access to the Small Business Deduction. At $150,000+ of passive income, the small business deduction is fully eliminated, causing your corporation to pay more corporate tax than necessary.",
             },
             {
               title: "3. Loss of Lifetime Capital Gains Exemption",
@@ -56,6 +80,7 @@ export default function CorporateTax({ setPage }: any) {
               <h2 className="text-3xl font-serif text-accent mb-4">
                 {item.title}
               </h2>
+
               <p className="text-white/75 leading-relaxed">
                 {item.text}
               </p>
@@ -63,72 +88,79 @@ export default function CorporateTax({ setPage }: any) {
           ))}
         </div>
 
-<div className="premium-card p-8 mb-16">
-  <h2 className="text-3xl font-serif text-accent mb-4">
-    Tax Impact of Losing the Small Business Deduction
-  </h2>
+        <div
+          id="small-business-deduction"
+          className="premium-card p-8 mb-16 scroll-mt-32"
+        >
+          <h2 className="text-3xl font-serif text-accent mb-4">
+            Tax Impact of Losing the Small Business Deduction
+          </h2>
 
-  <p className="text-white/75 leading-relaxed mb-6">
-    Once passive income becomes too high, the Small Business Deduction may be
-    reduced or eliminated entirely. This means the corporation may lose access
-    to the lower small business tax rate on active business income.
-  </p>
+          <p className="text-white/75 leading-relaxed mb-6">
+            Once passive income becomes too high, the Small Business Deduction
+            may be reduced or eliminated entirely. This means the corporation
+            may lose access to the lower small business tax rate on active
+            business income.
+          </p>
 
-  <div className="grid md:grid-cols-3 gap-4 mb-8">
-    <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-      <p className="text-white/70 mb-3">
-        Tax on $500,000 business revenue at 12.2%
-      </p>
+          <div className="grid md:grid-cols-3 gap-4 mb-8">
+            <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
+              <p className="text-white/70 mb-3">
+                Tax on $500,000 business revenue at 12.2%
+              </p>
 
-      <p className="text-sm text-white/50 mb-2">
-        $500,000 × 12.2%
-      </p>
+              <p className="text-sm text-white/50 mb-2">
+                $500,000 × 12.2%
+              </p>
 
-      <p className="text-accent font-serif text-xl">
-        = $61,000 corporate tax bill
-      </p>
-    </div>
+              <p className="text-accent font-serif text-xl">
+                = $61,000 corporate tax bill
+              </p>
+            </div>
 
-    <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-      <p className="text-white/70 mb-3">
-        Tax on $500,000 business revenue at 26.5%
-      </p>
+            <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
+              <p className="text-white/70 mb-3">
+                Tax on $500,000 business revenue at 26.5%
+              </p>
 
-      <p className="text-sm text-white/50 mb-2">
-        $500,000 × 26.5%
-      </p>
+              <p className="text-sm text-white/50 mb-2">
+                $500,000 × 26.5%
+              </p>
 
-      <p className="text-accent font-serif text-xl">
-        = $132,500 corporate tax bill
-      </p>
-    </div>
+              <p className="text-accent font-serif text-xl">
+                = $132,500 corporate tax bill
+              </p>
+            </div>
 
-    <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-      <p className="text-white/70 mb-3">
-        Additional annual tax owing
-      </p>
+            <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
+              <p className="text-white/70 mb-3">
+                Additional annual tax owing
+              </p>
 
-      <p className="text-sm text-white/50 mb-2">
-        $132,500 − $61,000
-      </p>
+              <p className="text-sm text-white/50 mb-2">
+                $132,500 − $61,000
+              </p>
 
-      <p className="text-accent font-serif text-xl">
-        = $71,500
-      </p>
-    </div>
-  </div>
+              <p className="text-accent font-serif text-xl">
+                = $71,500
+              </p>
+            </div>
+          </div>
 
-  <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-6">
-    <p className="text-white/80 leading-relaxed">
-      In this example, excessive passive income causes the Small Business
-      Deduction to be fully clawed back, resulting in $71,500 in
-      additional annual corporate tax on the first $500,000 of active business
-      income alone.
-    </p>
-  </div>
-</div>
+          <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-6">
+            <p className="text-white/80 leading-relaxed">
+              In this example, excessive passive income causes the Small
+              Business Deduction to be fully clawed back, resulting in $71,500
+              in additional annual corporate tax on the first $500,000 of active
+              business income alone.
+            </p>
+          </div>
+        </div>
 
-        <div className="premium-card p-8 mb-16">
+        <div
+          id="lifetime-capital-gains"
+          className="premium-card p-8 mb-16 scroll-mt-32"
+        >
           <h2 className="text-3xl font-serif text-accent mb-4">
             Lifetime Capital Gains Exemption Risk
           </h2>
@@ -158,16 +190,24 @@ export default function CorporateTax({ setPage }: any) {
           </div>
         </div>
 
-        <div className="premium-card p-8 mb-16">
+        <div
+          id="double-taxation"
+          className="premium-card p-8 mb-16 scroll-mt-32"
+        >
           <h2 className="text-3xl font-serif text-accent mb-4">
             Double Taxation on Death
           </h2>
 
           <p className="text-white/75 leading-relaxed mb-6">
-When a shareholder of a Canadian-Controlled Private Corporation passes away, they are deemed to have disposed of their shares at fair market value. 
-This may trigger a capital gain on the final tax return. Later, when corporate assets are distributed to heirs, those same underlying values may be 
-taxed again as dividends or through a wind-up.Without proper planning, the value of the business could be significantly reduced, in some cases up to 75%. 
-With the right corporate tax and estate planning strategy, this burden may be reduced or avoided.
+            When a shareholder of a Canadian-Controlled Private Corporation
+            passes away, they are deemed to have disposed of their shares at
+            fair market value. This may trigger a capital gain on the final tax
+            return. Later, when corporate assets are distributed to heirs, those
+            same underlying values may be taxed again as dividends or through a
+            wind-up. Without proper planning, the value of the business could be
+            significantly reduced, in some cases up to 75%. With the right
+            corporate tax and estate planning strategy, this burden may be
+            reduced or avoided.
           </p>
 
           <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-6">
