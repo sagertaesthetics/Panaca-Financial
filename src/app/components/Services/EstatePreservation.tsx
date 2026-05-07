@@ -64,7 +64,7 @@ export default function EstatePreservation({ setPage }: any) {
 
 <div className="mb-6">
   <p className="text-white/75 leading-relaxed">
-    Possible ways for your estate to pay the terminal tax return owing upon death:
+    Possible ways for your estate to pay the terminal tax return owing upon your death:
   </p>
 </div>
 
