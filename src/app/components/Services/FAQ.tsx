@@ -54,7 +54,18 @@ export default function FAQPage({ setPage }: any) {
           {faqSections.map((section) => (
             <button
               key={section.title}
-              onClick={() => setActiveSection(section)}
+              onClick={() => {
+                setActiveSection(section);
+
+                setTimeout(() => {
+                  document
+                    .getElementById("faq-questions")
+                    ?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                }, 50);
+              }}
               className={`text-left premium-card p-6 transition-all hover:-translate-y-1 ${
                 activeSection.title === section.title
                   ? "border-accent bg-accent/10"
@@ -84,7 +95,7 @@ export default function FAQPage({ setPage }: any) {
           ))}
         </div>
 
-        <div>
+        <div id="faq-questions">
           <h2 className="text-3xl md:text-4xl font-serif text-accent mb-6">
             {activeSection.title}
           </h2>
