@@ -23,7 +23,7 @@ export default function EstatePreservation({ setPage }: any) {
             </h1>
 
             <p className="text-white/75 text-lg leading-relaxed max-w-3xl">
-              Help ensure your estate has enough liquidity when it is needed most
+              Your estate might be asset rich, but do you have enough liquidity to pay all of the expenses of your estate upon your death?
             </p>
           </div>
 
