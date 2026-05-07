@@ -75,44 +75,49 @@ export default function CorporateTax({ setPage }: any) {
     to the lower small business tax rate on active business income.
   </p>
 
-  <div className="grid md:grid-cols-3 gap-4 mb-8">
-    <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-      <p className="text-accent font-serif text-xl mb-2">$61,000</p>
+ <div className="grid md:grid-cols-3 gap-4 mb-8">
+  <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
+    <p className="text-white/70 mb-3">
+      Tax on $500,000 at 12.2%
+    </p>
 
-      <p className="text-white/70 mb-3">
-        Tax on $500,000 at 12.2%
-      </p>
+    <p className="text-sm text-white/50 mb-2">
+      $500,000 × 12.2%
+    </p>
 
-      <p className="text-sm text-white/50">
-        $500,000 × 12.2%
-      </p>
-    </div>
-
-    <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-      <p className="text-accent font-serif text-xl mb-2">$132,500</p>
-
-      <p className="text-white/70 mb-3">
-        Tax on $500,000 at 26.5%
-      </p>
-
-      <p className="text-sm text-white/50">
-        $500,000 × 26.5%
-      </p>
-    </div>
-
-    <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
-      <p className="text-accent font-serif text-xl mb-2">$71,500</p>
-
-      <p className="text-white/70 mb-3">
-        Additional annual tax owing
-      </p>
-
-      <p className="text-sm text-white/50">
-        $132,500 − $61,000
-      </p>
-    </div>
+    <p className="text-accent font-serif text-xl">
+      = $61,000 corporate tax bill
+    </p>
   </div>
 
+  <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
+    <p className="text-white/70 mb-3">
+      Tax on $500,000 at 26.5%
+    </p>
+
+    <p className="text-sm text-white/50 mb-2">
+      $500,000 × 26.5%
+    </p>
+
+    <p className="text-accent font-serif text-xl">
+      = $132,500 corporate tax bill
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-accent/25 bg-white/5 p-5">
+    <p className="text-white/70 mb-3">
+      Additional annual tax owing
+    </p>
+
+    <p className="text-sm text-white/50 mb-2">
+      $132,500 − $61,000
+    </p>
+
+    <p className="text-accent font-serif text-xl">
+      = $71,500
+    </p>
+  </div>
+</div>
   <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-6">
     <p className="text-white/80 leading-relaxed">
       In this example, excessive passive income causes the Small Business
