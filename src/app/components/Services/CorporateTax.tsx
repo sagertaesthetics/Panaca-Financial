@@ -121,7 +121,7 @@ export default function CorporateTax({ setPage }: any) {
   <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-6">
     <p className="text-white/80 leading-relaxed">
       In this example, excessive passive income causes the Small Business
-      Deduction to be fully clawed back, resulting in approximately $71,500 in
+      Deduction to be fully clawed back, resulting in $71,500 in
       additional annual corporate tax on the first $500,000 of active business
       income alone.
     </p>
