@@ -164,12 +164,10 @@ export default function CorporateTax({ setPage }: any) {
           </h2>
 
           <p className="text-white/75 leading-relaxed mb-6">
-            When a shareholder of a Canadian-Controlled Private Corporation
-            passes away, they are deemed to have disposed of their shares at fair
-            market value. This may trigger a capital gain on the final tax
-            return. Later, when corporate assets are distributed to heirs, those
-            same underlying values may be taxed again as dividends or through a
-            wind-up.
+When a shareholder of a Canadian-Controlled Private Corporation passes away, they are deemed to have disposed of their shares at fair market value. 
+This may trigger a capital gain on the final tax return. Later, when corporate assets are distributed to heirs, those same underlying values may be 
+taxed again as dividends or through a wind-up.Without proper planning, the value of the business could be significantly reduced, in some cases up to 75%. 
+With the right corporate tax and estate planning strategy, this burden may be reduced or avoided.
           </p>
 
           <div className="rounded-[2rem] border border-accent/30 bg-accent/10 p-6">
