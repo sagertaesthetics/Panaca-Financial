@@ -45,7 +45,7 @@ export default function App() {
             <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <p className="uppercase tracking-[0.35em] text-accent mb-5">
-                  Tax • Wealth • Legacy
+                  Tax Planning •  Estate Preservation • Legacy Creation
                 </p>
 
                 <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-6">
