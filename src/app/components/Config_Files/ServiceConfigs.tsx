@@ -38,7 +38,7 @@ export const services = [
     id: "corporate-life",
     title: "Corporate Owned Life Insurance",
     short:
-      "Explore tax-efficient ways to move surplus corporate cash into your hands personally.",
+      "Turn corporate cash into a long-term personal asset while improving tax efficiency.",
     details: [
       "Review money trapped inside the corporation that is not needed for day-to-day operations.",
       "Understand the impact of passive income inside a business.",
