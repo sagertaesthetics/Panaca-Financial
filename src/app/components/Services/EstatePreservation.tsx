@@ -62,12 +62,18 @@ export default function EstatePreservation({ setPage }: any) {
             own.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-4">
-            {[
-              "Sell assets — which may not be ideal if markets are low",
-              "Borrow money — placing financial burden on heirs",
-              "Use life insurance — often the most cost-effective solution",
-            ].map((item) => (
+<div className="mb-6">
+  <p className="text-white/75 leading-relaxed">
+    Possible ways for your estate to pay the terminal tax return owing upon death:
+  </p>
+</div>
+
+<div className="grid md:grid-cols-3 gap-4">
+  {[
+    "Sell assets — which may not be ideal if markets are low",
+    "Borrow money — placing financial burden on heirs",
+    "Use life insurance — often the most cost-effective solution",
+  ].map((item) => (
               <div
                 key={item}
                 className="rounded-2xl border border-accent/25 bg-white/5 p-5 text-white/75"
