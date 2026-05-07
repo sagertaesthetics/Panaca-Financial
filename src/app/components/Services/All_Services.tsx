@@ -1,6 +1,21 @@
 import PageHeader from "../Layout/PageHeader";
 import PageSection from "../Layout/PageSection";
 import { services } from "../Config_Files/ServiceConfigs";
+import BuySellImg from "../Assets/BuySell.jpg";
+import CDAImg from "../Assets/CDA.jpg";
+import CharitableGivingImg from "../Assets/CharitableGiving.jpg";
+import ColiImg from "../Assets/Coli.jpg";
+import CorporateTaxPlanningImg from "../Assets/CorporateTaxPlanning.jpg";
+import EstatePreservationImg from "../Assets/EstatePreservation.jpg";
+
+const serviceImages: Record<string, string> = {
+  "estate-preservation": EstatePreservationImg,
+  "charitable-giving": CharitableGivingImg,
+  "buy-sell": BuySellImg,
+  "corporate-life": ColiImg,
+  cda: CDAImg,
+  taxes: CorporateTaxPlanningImg,
+};
 
 export default function AllServices({ setPage }: any) {
   return (
@@ -27,9 +42,11 @@ export default function AllServices({ setPage }: any) {
                 onClick={() => setPage(service.id)}
                 className="group text-left premium-card p-7"
               >
-                <div className="mb-6 w-12 h-12 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center text-accent font-serif">
-                  ✦
-                </div>
+<img
+  src={serviceImages[service.id]}
+  alt={service.title}
+  className="w-full h-56 object-cover rounded-2xl mb-6"
+/>
 
                 <h3 className="text-2xl font-serif text-accent mb-4">
                   {service.title}
