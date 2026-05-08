@@ -180,6 +180,28 @@ export const faqSections = [
       },
     ],
   },
+  {
+  title: "Corporate Owned Life Insurance",
+  faqs: [
+    {
+      question: "Why opt for corporate-owned life insurance?",
+      answer:
+        "One of the major advantages of corporate-owned life insurance is the ability to pay insurance costs using corporate dollars that were taxed at lower active business tax rates. Since life insurance premiums are generally not tax-deductible, fewer pre-tax dollars may be required when the policy is owned by a corporation rather than personally.",
+    },
+    {
+      question:
+        "Why can corporate-owned insurance be more tax-efficient?",
+      answer:
+        "Personal tax rates are often higher than corporate active business tax rates. As a result, corporate-owned life insurance may allow business owners to use lower-taxed corporate dollars to support estate planning, business continuity, and long-term wealth objectives.",
+    },
+    {
+      question:
+        "Why do Canadian businesses purchase corporate life insurance?",
+      answer:
+        "Canadian business owners often purchase corporate-owned life insurance to protect business continuity, fund buy-sell agreements, create tax-efficient corporate wealth, help offset future tax liabilities, and support long-term estate and succession planning.",
+    },
+  ],
+},
 
   {
     title: "General Questions",
