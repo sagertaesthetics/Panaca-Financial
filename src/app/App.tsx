@@ -64,7 +64,7 @@ export default function App() {
                   Tax Planning •  Estate Preservation • Legacy Creation
                 </p>
 
-<p className="text-accent tracking-[0.25em] uppercase mb-4">
+<p className="text-accent/80 text-sm md:text-base italic font-serif mb-8">
   Don&apos;t leave your legacy to chance.
 </p>
 
