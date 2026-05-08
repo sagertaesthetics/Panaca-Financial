@@ -64,10 +64,9 @@ export default function App() {
                   Tax Planning •  Estate Preservation • Legacy Creation
                 </p>
 
-<div className="mb-10">
-  <p className="text-accent text-2xl md:text-4xl font-serif italic leading-tight gold-glow drop-shadow-[0_0_18px_rgba(184,137,36,0.45)]">
-    Don&apos;t leave your legacy to chance.
-  </p>
+<p className="text-accent text-3xl md:text-5xl font-serif italic tracking-wide leading-tight mb-10">
+  Don&apos;t leave your legacy to chance.
+</p>
 
   <div className="mt-4 h-[2px] w-32 bg-accent rounded-full" />
 </div>
