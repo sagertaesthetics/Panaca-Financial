@@ -1,6 +1,7 @@
 import PageHeader from "../Layout/PageHeader";
 import PageSection from "../Layout/PageSection";
 import { services } from "../Config_Files/ServiceConfigs";
+
 import BuySellImg from "../Assets/BuySell.jpg";
 import CDAImg from "../Assets/CDA.jpg";
 import CharitableGivingImg from "../Assets/CharitableGiving.jpg";
@@ -40,28 +41,41 @@ export default function AllServices({ setPage }: any) {
               <button
                 key={service.id}
                 onClick={() => setPage(service.id)}
-                className="group text-left premium-card p-7"
+                className="group text-left premium-card overflow-hidden p-0"
               >
-<img
-  src={serviceImages[service.id]}
-  alt={service.title}
-  className="w-full h-56 object-cover rounded-2xl mb-6"
-/>
+                <img
+                  src={serviceImages[service.id]}
+                  alt={service.title}
+                  className="w-full h-56 object-cover"
+                />
 
-                <h3 className="text-2xl font-serif text-accent mb-4">
-                  {service.title}
-                </h3>
+                <div className="p-7">
+                  <p className="text-accent/80 text-sm md:text-base italic font-serif mb-3">
+                    Don&apos;t leave your legacy to chance.
+                  </p>
 
-                <p className="text-white/75 mb-6 leading-relaxed">
-                  {service.short}
-                </p>
+                  <h3 className="text-2xl font-serif text-accent mb-4">
+                    {service.title}
+                  </h3>
 
-                <span className="text-accent text-sm tracking-wide group-hover:tracking-widest transition-all">
-                  Learn More →
-                </span>
+                  <p className="text-white/75 mb-6 leading-relaxed">
+                    {service.short}
+                  </p>
+
+                  <span className="text-accent text-sm tracking-wide group-hover:tracking-widest transition-all">
+                    Learn More →
+                  </span>
+                </div>
               </button>
             ))}
           </div>
+
+          <div className="gold-divider mt-20" />
+        </div>
+      </div>
+    </PageSection>
+  );
+}
 
           <div className="gold-divider mt-20" />
         </div>
