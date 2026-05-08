@@ -64,9 +64,9 @@ export default function App() {
                   Tax Planning •  Estate Preservation • Legacy Creation
                 </p>
 
-                <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-6">
-                  Keep more of your money.
-                </h1>
+<p className="text-accent tracking-[0.25em] uppercase mb-4">
+  Don&apos;t leave your legacy to chance.
+</p>
 
 <p className="text-lg md:text-xl text-white/75 max-w-xl leading-relaxed mb-8">
   Welcome to a world where paying less tax, ensuring your business or estate has the liquidity it needs when it matters most, and building multi-generational wealth becomes a reality.
