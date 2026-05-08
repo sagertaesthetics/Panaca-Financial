@@ -77,9 +77,3 @@ export default function AllServices({ setPage }: any) {
   );
 }
 
-          <div className="gold-divider mt-20" />
-        </div>
-      </div>
-    </PageSection>
-  );
-}
