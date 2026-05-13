@@ -54,15 +54,23 @@ export default function App() {
 
       {page === "home" && (
         <>
-          <section className="relative overflow-hidden px-6 py-24 bg-primary text-primary-foreground">
-            <div className="soft-orb top-20 left-10 w-32 h-32" />
-            <div className="soft-orb bottom-40 right-10 w-40 h-40" />
+<section className="relative overflow-hidden px-6 py-24 bg-primary text-primary-foreground">
+  <div className="soft-orb top-20 left-10 w-32 h-32" />
+  <div className="soft-orb bottom-40 right-10 w-40 h-40" />
 
-            <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-<p className="uppercase tracking-[0.18em] md:tracking-[0.35em] text-accent text-sm md:text-base leading-relaxed mb-8 max-w-full">
-  Tax Planning • Legacy Creation • Estate Preservation
-</p>
+  <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <div>
+
+      <div className="flex flex-wrap gap-3 mb-8">
+        {["Tax Planning", "Estate Preservation", "Legacy Creation"].map((item) => (
+          <span
+            key={item}
+            className="rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-xs md:text-sm uppercase tracking-[0.18em] text-accent"
+          >
+            {item}
+          </span>
+        ))}
+      </div>
 
 <p className="text-accent text-3xl md:text-5xl font-serif italic tracking-wide leading-tight mb-10">
   Don&apos;t leave your legacy to chance.
