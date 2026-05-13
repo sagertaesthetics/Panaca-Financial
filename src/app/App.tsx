@@ -61,7 +61,7 @@ export default function App() {
             <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
               <div>
 <p className="uppercase tracking-[0.18em] md:tracking-[0.35em] text-accent text-sm md:text-base leading-relaxed mb-8 max-w-full">
-  Tax Planning • Estate Preservation • Legacy Creation
+  Tax Planning • Legacy Creation • Estate Preservation
 </p>
 
 <p className="text-accent text-3xl md:text-5xl font-serif italic tracking-wide leading-tight mb-10">
