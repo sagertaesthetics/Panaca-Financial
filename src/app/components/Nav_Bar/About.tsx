@@ -170,10 +170,10 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
               Every great plan begins with a single conversation. Let's talk about your taxes, your legacy, and the future you want to build.
             </p>
 
-            <button
-              onClick={() => goTo("contact")}
-              className="px-8 py-3 rounded-full bg-accent text-primary hover:opacity-90 transition font-medium"
-            >
+                  <button
+                    onClick={() => setPage("contact")}
+                    className="px-7 py-3 rounded-full border border-accent text-white hover:bg-accent/10 transition"
+                  >
               Contact Panaca Financial
             </button>
           </div>
