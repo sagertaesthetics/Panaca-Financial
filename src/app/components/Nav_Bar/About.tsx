@@ -1,10 +1,20 @@
+import { useState } from "react";
 import logoMark from "../Assets/Panaca_Mark.png";
 
+type Card = "jeff" | "panaca" | null;
+
 export default function About({ setPage }: { setPage: (page: string) => void }) {
+  const [active, setActive] = useState<Card>(null);
+
   const goTo = (page: string) => {
     setPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const toggle = (card: Card) => {
+    setActive((prev) => (prev === card ? null : card));
+  };
+
   return (
     <div className="bg-background text-foreground min-h-screen">
 
@@ -15,15 +25,13 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
 
         <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <p className="uppercase tracking-[0.35em] text-accent mb-4">
-              About
-            </p>
+            <p className="uppercase tracking-[0.35em] text-accent mb-4">About</p>
             <h1 className="text-5xl md:text-6xl font-serif leading-tight mb-4">
-              The person behind
+              The people behind
               <span className="block text-accent">your plan.</span>
             </h1>
             <p className="text-white/70 max-w-xl text-lg leading-relaxed">
-              Over 25 years of experience. One unwavering principle: do right by the client, every single time.
+              Select a card to learn more.
             </p>
           </div>
 
@@ -40,143 +48,163 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
 
       <div className="gold-divider" />
 
-      {/* JEFF BIO */}
+      {/* CARDS */}
       <section className="px-6 py-16 bg-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+        <div className="max-w-5xl mx-auto space-y-6">
 
-          {/* HEADSHOT */}
-          <div className="flex flex-col items-center lg:items-start gap-6 lg:sticky lg:top-24 lg:self-start">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-3xl bg-accent/20 blur-2xl scale-110" />
-              <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-3xl border border-accent/40 bg-white/5 backdrop-blur-sm flex flex-col items-center justify-center gap-3 overflow-hidden">
-                {/* Decorative corner lines */}
-                <span className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-accent/60 rounded-tl-lg" />
-                <span className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-accent/60 rounded-tr-lg" />
-                <span className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-accent/60 rounded-bl-lg" />
-                <span className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-accent/60 rounded-br-lg" />
+          {/* JEFF CARD */}
+          <button
+            onClick={() => toggle("jeff")}
+            className={`w-full text-left rounded-3xl border transition-all duration-300 overflow-hidden focus:outline-none ${
+              active === "jeff"
+                ? "border-accent bg-white/10 shadow-2xl"
+                : "border-accent/25 bg-white/5 hover:border-accent/60 hover:bg-white/8"
+            }`}
+          >
+            {/* Card Header */}
+            <div className="flex items-center justify-between px-8 py-6 gap-6">
+              <div className="flex items-center gap-5">
+                {/* Avatar placeholder */}
+                <div className="w-14 h-14 rounded-full border border-accent/40 bg-white/5 flex items-center justify-center shrink-0">
+                  <svg viewBox="0 0 40 40" className="w-8 h-8 text-accent/50" fill="currentColor">
+                    <circle cx="20" cy="14" r="8" />
+                    <path d="M4 36c0-8.837 7.163-16 16-16s16 7.163 16 16H4z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xl font-serif text-white">Jeff</p>
+                  <p className="text-accent text-xs tracking-widest uppercase mt-0.5">
+                    Founder, Panaca Financial
+                  </p>
+                </div>
+              </div>
+              <span
+                className="text-accent text-2xl leading-none transition-transform duration-300 shrink-0"
+                style={{ transform: active === "jeff" ? "rotate(45deg)" : "rotate(0deg)" }}
+              >
+                +
+              </span>
+            </div>
 
-                <svg
-                  viewBox="0 0 80 80"
-                  className="w-24 h-24 text-accent/40"
-                  fill="currentColor"
-                >
-                  <circle cx="40" cy="28" r="18" />
-                  <path d="M10 72c0-16.569 13.431-30 30-30s30 13.431 30 30H10z" />
-                </svg>
-                <p className="text-accent/60 text-sm tracking-[0.2em] uppercase">
-                  Headshot
-                </p>
+            {/* Jeff Content */}
+            <div
+              className="transition-all duration-500 overflow-hidden"
+              style={{ maxHeight: active === "jeff" ? "1200px" : "0px" }}
+            >
+              <div className="px-8 pb-8 border-t border-accent/20 pt-6 grid md:grid-cols-2 gap-8">
+                {/* Headshot */}
+                <div className="flex flex-col items-center gap-4">
+                  <div className="relative w-full max-w-xs">
+                    <div className="absolute inset-0 rounded-2xl bg-accent/15 blur-2xl scale-105" />
+                    <div className="relative rounded-2xl border border-accent/30 bg-white/5 h-64 flex flex-col items-center justify-center gap-2 overflow-hidden">
+                      <span className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-accent/50 rounded-tl-md" />
+                      <span className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-accent/50 rounded-tr-md" />
+                      <span className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-accent/50 rounded-bl-md" />
+                      <span className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-accent/50 rounded-br-md" />
+                      <svg viewBox="0 0 80 80" className="w-20 h-20 text-accent/35" fill="currentColor">
+                        <circle cx="40" cy="28" r="18" />
+                        <path d="M10 72c0-16.569 13.431-30 30-30s30 13.431 30 30H10z" />
+                      </svg>
+                      <p className="text-accent/50 text-xs tracking-[0.2em] uppercase">Headshot</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bio Text */}
+                <div className="space-y-5 text-white/80 leading-relaxed">
+                  <div>
+                    <p className="text-accent text-xs uppercase tracking-widest mb-1">Background</p>
+                    <p>Born and raised in Tottenham, ON, Jeff grew up with a love for sports — especially hockey and baseball. After graduating high school on the honour roll, he went on to Wilfrid Laurier University, earning an honours degree in Economics and Financial Management.</p>
+                  </div>
+                  <div>
+                    <p className="text-accent text-xs uppercase tracking-widest mb-1">25+ Years in Financial Services</p>
+                    <p>Committed to exceptional service, Jeff makes even the most complex topics easy to understand — using plain language so clients fully grasp how working with him leads to passing on as much of their estate as possible to their heirs.</p>
+                  </div>
+                  <div>
+                    <p className="text-accent text-xs uppercase tracking-widest mb-1">Guiding Principle</p>
+                    <p className="italic text-accent/90 font-serif">"Do right by my client every single time without fail."</p>
+                    <p className="mt-1">Each client is unique. Every solution is tailored to your individual circumstances — never one-size-fits-all.</p>
+                  </div>
+                  <div>
+                    <p className="text-accent text-xs uppercase tracking-widest mb-1">Family</p>
+                    <p>Jeff is married to Kerri-Ann, a teacher with the Toronto District School Board. Together they have two daughters, Tasha and Jadyn, who love soccer and baseball.</p>
+                  </div>
+                </div>
               </div>
             </div>
+          </button>
 
-            <div className="text-center lg:text-left">
-              <p className="text-2xl font-serif text-white">Jeff</p>
-              <p className="text-accent text-sm tracking-widest uppercase mt-1">
-                President, Panaca Financial
-              </p>
-            </div>
-          </div>
-
-          {/* BIO TEXT */}
-          <div className="space-y-8">
-            <div>
-              <p className="uppercase tracking-[0.25em] text-accent text-xs mb-3">
-                Background
-              </p>
-              <p className="text-white/80 leading-relaxed text-lg">
-                Born and raised in Tottenham, ON, Jeff grew up with a love for sports especially hockey and baseball. After graduating high school on the honour roll, he went on to Wilfrid Laurier University, earning an honours degree in Economics and Financial Management.
-              </p>
-            </div>
-
-            <div>
-              <p className="uppercase tracking-[0.25em] text-accent text-xs mb-3">
-                25+ Years in Financial Services
-              </p>
-              <p className="text-white/80 leading-relaxed text-lg">
-                Over more than two decades, Jeff has committed himself to providing exceptional service. Even though the subject matter is complex, he makes it easy to understand using plain language so clients fully grasp how working with him leads to passing on as much of their estate as possible to their heirs.
-              </p>
-            </div>
-
-            <div className="premium-card p-7 border-accent/40">
-              <p className="text-accent font-serif text-xl mb-3">
-                "Do right by my client every single time without fail."
-              </p>
-              <p className="text-white/70 leading-relaxed">
-                Each client is unique. Their situation is different from anyone else's. That means every solution Jeff recommends is tailored to address your individual circumstances never a one size fits all approach.
-              </p>
-            </div>
-
-            <div>
-              <p className="uppercase tracking-[0.25em] text-accent text-xs mb-3">
-                Family
-              </p>
-              <p className="text-white/80 leading-relaxed text-lg">
-                Jeff is married to Kerri-Ann, a teacher with the Toronto District School Board. Together they have two daughters, Tasha and Jadyn, who love playing soccer and baseball respectively.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="gold-divider" />
-
-      {/* PANACA FINANCIAL */}
-      <section className="px-6 py-16 bg-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto">
-          <p className="uppercase tracking-[0.35em] text-accent mb-5">
-            Panaca Financial
-          </p>
-
-          <h2 className="text-4xl md:text-6xl font-serif leading-tight mb-14 max-w-3xl">
-            Your wealth. Your legacy.
-            <span className="block text-accent">Your choice.</span>
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            {[
-              {
-                heading: "Our Belief",
-                body: "You should pay as little tax as possible throughout your lifetime. Our underlying belief is that you should pass as much of your net worth as possible onto your heirs, estate, charity or wherever you choose. Without proper planning, CRA becomes your unintended beneficiary.",
-              },
-              {
-                heading: "Our Mission",
-                body: "To help you create multi generational wealth. We clarify the complexities, help you see the full picture, and build strategies and structures tailored specifically to your objectives. Think of us as the quarterback for your financial defense.",
-              },
-              {
-                heading: "Our Approach",
-                body: "We believe in long term relationships built on trust, transparency, and mutual respect. We take the time to know our clients and their families, their financial goals, and their unique circumstances developing a customized plan designed to meet your specific needs.",
-              },
-            ].map(({ heading, body }) => (
-              <div key={heading} className="premium-card p-8">
-                <h3 className="text-xl font-serif text-accent mb-4">
-                  {heading}
-                </h3>
-                <p className="text-white/75 leading-relaxed">{body}</p>
+          {/* PANACA CARD */}
+          <button
+            onClick={() => toggle("panaca")}
+            className={`w-full text-left rounded-3xl border transition-all duration-300 overflow-hidden focus:outline-none ${
+              active === "panaca"
+                ? "border-accent bg-white/10 shadow-2xl"
+                : "border-accent/25 bg-white/5 hover:border-accent/60 hover:bg-white/8"
+            }`}
+          >
+            {/* Card Header */}
+            <div className="flex items-center justify-between px-8 py-6 gap-6">
+              <div className="flex items-center gap-5">
+                <div className="w-14 h-14 rounded-full border border-accent/40 bg-white/5 flex items-center justify-center shrink-0 overflow-hidden">
+                  <img src={logoMark} alt="Panaca" className="w-10 h-10 object-contain mix-blend-screen" />
+                </div>
+                <div>
+                  <p className="text-xl font-serif text-white">Panaca Financial</p>
+                  <p className="text-accent text-xs tracking-widest uppercase mt-0.5">
+                    Tax · Wealth · Legacy
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
+              <span
+                className="text-accent text-2xl leading-none transition-transform duration-300 shrink-0"
+                style={{ transform: active === "panaca" ? "rotate(45deg)" : "rotate(0deg)" }}
+              >
+                +
+              </span>
+            </div>
+
+            {/* Panaca Content */}
+            <div
+              className="transition-all duration-500 overflow-hidden"
+              style={{ maxHeight: active === "panaca" ? "1200px" : "0px" }}
+            >
+              <div className="px-8 pb-8 border-t border-accent/20 pt-6 space-y-6 text-white/80 leading-relaxed">
+                <div>
+                  <p className="text-accent text-xs uppercase tracking-widest mb-1">Our Belief</p>
+                  <p>You should pay as little tax as possible throughout your lifetime. Our underlying belief is that you should pass as much of your net worth as possible onto your heirs, estate, charity — or wherever you choose. Without proper planning, CRA becomes your unintended beneficiary. Don't leave your legacy to chance.</p>
+                </div>
+                <div>
+                  <p className="text-accent text-xs uppercase tracking-widest mb-1">Our Mission</p>
+                  <p>To help you create multi-generational wealth. We clarify the complexities, help you see the full picture, and build strategies and structures tailored specifically to your objectives. Think of us as the quarterback for your financial defense.</p>
+                </div>
+                <div>
+                  <p className="text-accent text-xs uppercase tracking-widest mb-1">Our Approach</p>
+                  <p>We believe in long-term relationships built on trust, transparency, and mutual respect. We take the time to know our clients and their families, their financial goals, and their unique circumstances — developing a customized plan designed to meet your specific needs.</p>
+                </div>
+              </div>
+            </div>
+          </button>
 
           {/* CTA */}
-          <div className="rounded-[2rem] bg-white/8 p-10 md:p-16 text-center shadow-2xl border border-accent/30 gold-glow">
+          <div className="rounded-[2rem] bg-white/8 p-10 md:p-14 text-center shadow-2xl border border-accent/30 gold-glow mt-10">
             <p className="uppercase tracking-[0.35em] text-accent mb-4">
               Don't leave your legacy to chance.
             </p>
-
-            <h2 className="text-4xl md:text-5xl font-serif mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif mb-5">
               Ready to start the conversation?
             </h2>
-
-            <p className="text-white/75 max-w-2xl mx-auto mb-8">
+            <p className="text-white/75 max-w-xl mx-auto mb-7">
               Every great plan begins with a single conversation. Let's talk about your taxes, your legacy, and the future you want to build.
             </p>
-
-                  <button
-                    onClick={() => setPage("contact")}
-                    className="px-7 py-3 rounded-full border border-accent text-white hover:bg-accent/10 transition"
-                  >
+            <button
+              onClick={() => goTo("contact")}
+              className="px-8 py-3 rounded-full bg-accent text-primary hover:opacity-90 transition font-medium"
+            >
               Contact Panaca Financial
             </button>
           </div>
+
         </div>
       </section>
     </div>
