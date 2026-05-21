@@ -12,7 +12,7 @@ import CorporateTax from "./components/Services/CorporateTax";
 import CDA from "./components/Services/CDA";
 import CorporateLifeInsurance from "./components/Services/CorporateLifeInsurance";
 import EstateFreeze from "./components/Services/EstateFreeze";
-import About from "./compnents/Nav_Bar/About";
+import About from "./components/Nav_Bar/About";
 import BuySellImg from "./components/Assets/BuySell.jpg";
 import CDAImg from "./components/Assets/CDA.jpg";
 import CharitableGivingImg from "./components/Assets/CharitableGiving.jpg";
@@ -182,7 +182,7 @@ export default function App() {
         </>
       )}
 
-      {page === "about" && <AboutPage />}
+      {page === "about" && <About />}
 
       {page === "services" && <AllServices setPage={setPage} />}
 
