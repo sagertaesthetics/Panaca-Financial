@@ -1,34 +1,47 @@
+import logoMark from "../Assets/Panaca_Mark.png";
+
 export default function About({ setPage }: { setPage: (page: string) => void }) {
   return (
     <div className="bg-background text-foreground min-h-screen">
 
       {/* HERO */}
-      <section className="relative overflow-hidden px-6 py-24 bg-primary text-primary-foreground">
+      <section className="relative overflow-hidden px-6 py-14 bg-primary text-primary-foreground">
         <div className="soft-orb top-10 right-20 w-64 h-64" />
         <div className="soft-orb bottom-10 left-10 w-40 h-40" />
 
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <p className="uppercase tracking-[0.35em] text-accent mb-5">
-            About
-          </p>
-          <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-4">
-            The person behind
-            <span className="block text-accent">your plan.</span>
-          </h1>
-          <p className="text-white/70 max-w-2xl text-lg leading-relaxed">
-            Over 25 years of experience. One unwavering principle: do right by the client, every single time.
-          </p>
+        <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <p className="uppercase tracking-[0.35em] text-accent mb-4">
+              About
+            </p>
+            <h1 className="text-5xl md:text-6xl font-serif leading-tight mb-4">
+              The person behind
+              <span className="block text-accent">your plan.</span>
+            </h1>
+            <p className="text-white/70 max-w-xl text-lg leading-relaxed">
+              Over 25 years of experience. One unwavering principle: do right by the client, every single time.
+            </p>
+          </div>
+
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="absolute w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
+            <img
+              src={logoMark}
+              alt="Panaca Financial"
+              className="relative w-48 md:w-64 mix-blend-screen drop-shadow-xl opacity-90"
+            />
+          </div>
         </div>
       </section>
 
       <div className="gold-divider" />
 
       {/* JEFF BIO */}
-      <section className="px-6 py-24 bg-primary text-primary-foreground">
+      <section className="px-6 py-16 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
 
           {/* HEADSHOT */}
-          <div className="flex flex-col items-center lg:items-start gap-6">
+          <div className="flex flex-col items-center lg:items-start gap-6 lg:sticky lg:top-24 lg:self-start">
             <div className="relative">
               <div className="absolute inset-0 rounded-3xl bg-accent/20 blur-2xl scale-110" />
               <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-3xl border border-accent/40 bg-white/5 backdrop-blur-sm flex flex-col items-center justify-center gap-3 overflow-hidden">
@@ -104,7 +117,7 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
       <div className="gold-divider" />
 
       {/* PANACA FINANCIAL */}
-      <section className="px-6 py-24 bg-primary text-primary-foreground">
+      <section className="px-6 py-16 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto">
           <p className="uppercase tracking-[0.35em] text-accent mb-5">
             Panaca Financial
