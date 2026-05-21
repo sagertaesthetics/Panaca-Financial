@@ -81,13 +81,6 @@ export default function NavBar({ setPage }: any) {
             </div>
           </div>
 
-          <button
-            onClick={() => goTo("about")}
-            className="hover:text-accent transition"
-          >
-            About
-          </button>
-
           <div className="relative group">
             <button
               onClick={() => goTo("resources")}
@@ -120,6 +113,13 @@ export default function NavBar({ setPage }: any) {
               </button>
             </div>
           </div>
+
+          <button
+            onClick={() => goTo("about")}
+            className="hover:text-accent transition"
+          >
+            About
+          </button>
 
           <button
             onClick={() => goTo("contact")}
@@ -170,13 +170,6 @@ export default function NavBar({ setPage }: any) {
             </div>
 
             <button
-              onClick={() => goTo("about")}
-              className="text-left py-2 hover:text-accent"
-            >
-              About
-            </button>
-
-            <button
               onClick={() => goTo("resources")}
               className="text-left py-2 text-accent"
             >
@@ -198,6 +191,13 @@ export default function NavBar({ setPage }: any) {
                 FAQ
               </button>
             </div>
+
+            <button
+              onClick={() => goTo("about")}
+              className="text-left py-2 hover:text-accent"
+            >
+              About
+            </button>
 
             <button
               onClick={() => goTo("contact")}
