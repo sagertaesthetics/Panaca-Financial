@@ -89,7 +89,7 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
                 25+ Years in Financial Services
               </p>
               <p className="text-white/80 leading-relaxed text-lg">
-                Over more than two decades, Jeff has committed himself to providing exceptional service. Even though the subject matter is complex, he makes it easy to understand — using plain language so clients fully grasp how working with him leads to passing on as much of their estate as possible to their heirs.
+                Over more than two decades, Jeff has committed himself to providing exceptional service. Even though the subject matter is complex, he makes it easy to understand using plain language so clients fully grasp how working with him leads to passing on as much of their estate as possible to their heirs.
               </p>
             </div>
 
@@ -132,15 +132,15 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
             {[
               {
                 heading: "Our Belief",
-                body: "You should pay as little tax as possible throughout your lifetime. Our underlying belief is that you should pass as much of your net worth as possible onto your heirs, estate, charity — or wherever you choose. Without proper planning, CRA becomes your unintended beneficiary.",
+                body: "You should pay as little tax as possible throughout your lifetime. Our underlying belief is that you should pass as much of your net worth as possible onto your heirs, estate, charity or wherever you choose. Without proper planning, CRA becomes your unintended beneficiary.",
               },
               {
                 heading: "Our Mission",
-                body: "To help you create multi-generational wealth. We clarify the complexities, help you see the full picture, and build strategies and structures tailored specifically to your objectives. Think of us as the quarterback for your financial defense.",
+                body: "To help you create multi generational wealth. We clarify the complexities, help you see the full picture, and build strategies and structures tailored specifically to your objectives. Think of us as the quarterback for your financial defense.",
               },
               {
                 heading: "Our Approach",
-                body: "We believe in long-term relationships built on trust, transparency, and mutual respect. We take the time to know our clients and their families, their financial goals, and their unique circumstances — developing a customized plan designed to meet your specific needs.",
+                body: "We believe in long-term relationships built on trust, transparency, and mutual respect. We take the time to know our clients and their families, their financial goals, and their unique circumstances developing a customized plan designed to meet your specific needs.",
               },
             ].map(({ heading, body }) => (
               <div key={heading} className="premium-card p-8">
