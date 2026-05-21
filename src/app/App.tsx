@@ -12,7 +12,7 @@ import CorporateTax from "./components/Services/CorporateTax";
 import CDA from "./components/Services/CDA";
 import CorporateLifeInsurance from "./components/Services/CorporateLifeInsurance";
 import EstateFreeze from "./components/Services/EstateFreeze";
-
+import About from "./compnents/Nav_Bar/About";
 import BuySellImg from "./components/Assets/BuySell.jpg";
 import CDAImg from "./components/Assets/CDA.jpg";
 import CharitableGivingImg from "./components/Assets/CharitableGiving.jpg";
@@ -32,6 +32,7 @@ const serviceImages: Record<string, string> = {
 type Page =
   | "home"
   | "services"
+  | "about"
   | "estate-preservation"
   | "estate-freeze"
   | "charitable-giving"
@@ -180,6 +181,8 @@ export default function App() {
           </section>
         </>
       )}
+
+      {page === "about" && <AboutPage />}
 
       {page === "services" && <AllServices setPage={setPage} />}
 
@@ -409,6 +412,7 @@ export default function App() {
         page !== "charitable-giving" &&
         page !== "taxes" &&
         page !== "cda" &&
+        page !== "about" &&
         page !== "corporate-life" &&
         page !== "estate-freeze" &&
         page !== "estate-preservation" && (
