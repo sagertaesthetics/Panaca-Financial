@@ -100,7 +100,7 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
                       Each client is unique and their situation different from anyone else's. That means solutions Jeff recommends are tailored to address your own individual circumstances.
                     </p>
                     <p>
-                      Jeff is married to his wife Kerri-Ann, who is a teacher with the Toronto District School Board. He also has two daughters, Tasha and Jadyn, who love playing soccer and baseball respectively.
+                      Jeff is married to his wife Kerri-Ann, who is a teacher with the Toronto District School Board. Together they have two daughters, Tasha and Jadyn, who love playing soccer and baseball respectively.
                     </p>
                   </div>
                 </div>
