@@ -182,7 +182,7 @@ export default function App() {
         </>
       )}
 
-      {page === "about" && <About />}
+      {page === "about" && <About setPage={setPage} />}
 
       {page === "services" && <AllServices setPage={setPage} />}
 
@@ -383,7 +383,7 @@ export default function App() {
 
       {page === "cda" && <CDA setPage={setPage} />}
 
-      {page === "contact" && <Contact />}
+      {page === "contact" && <Contact setPage={setPage} />}
 
       {page === "buy-sell" && <BuySell setPage={setPage} />}
 
