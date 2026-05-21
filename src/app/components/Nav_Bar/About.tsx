@@ -68,7 +68,7 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
             <div className="text-center lg:text-left">
               <p className="text-2xl font-serif text-white">Jeff</p>
               <p className="text-accent text-sm tracking-widest uppercase mt-1">
-                Founder, Panaca Financial
+                President, Panaca Financial
               </p>
             </div>
           </div>
