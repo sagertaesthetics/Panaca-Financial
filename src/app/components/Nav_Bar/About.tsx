@@ -98,7 +98,7 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
                 "Do right by my client every single time without fail."
               </p>
               <p className="text-white/70 leading-relaxed">
-                Each client is unique. Their situation is different from anyone else's. That means every solution Jeff recommends is tailored to address your individual circumstances never a one-size-fits-all approach.
+                Each client is unique. Their situation is different from anyone else's. That means every solution Jeff recommends is tailored to address your individual circumstances never a one size fits all approach.
               </p>
             </div>
 
