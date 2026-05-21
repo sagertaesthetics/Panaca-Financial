@@ -17,7 +17,7 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
     <div className="bg-background text-foreground min-h-screen">
 
       {/* HERO */}
-      <section className="relative overflow-hidden px-6 py-14 bg-primary text-primary-foreground">
+      <section className="relative overflow-hidden px-6 py-10 bg-primary text-primary-foreground">
         <div className="soft-orb top-10 right-20 w-64 h-64" />
         <div className="soft-orb bottom-10 left-10 w-40 h-40" />
 
@@ -45,7 +45,7 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
 
       <div className="gold-divider" />
 
-      <section className="px-6 py-16 bg-primary text-primary-foreground">
+      <section className="px-6 py-8 bg-primary text-primary-foreground">
         <div className="max-w-3xl mx-auto space-y-5">
 
           {/* JEFF CARD */}
