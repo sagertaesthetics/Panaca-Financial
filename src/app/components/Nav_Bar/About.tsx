@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logoMark from "../Assets/Panaca_Mark.png";
+import jeffHeadshot from "../Assets/Jeff_Sagert.png";
 
 type Card = "jeff" | "panaca" | null;
 
@@ -55,11 +56,8 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
               className="w-full flex items-center justify-between gap-6 px-8 py-6 bg-white/5 hover:bg-white/8 transition focus:outline-none"
             >
               <div className="flex items-center gap-5">
-                <div className="w-12 h-12 rounded-full border border-accent/40 bg-white/5 flex items-center justify-center shrink-0">
-                  <svg viewBox="0 0 40 40" className="w-7 h-7 text-accent/50" fill="currentColor">
-                    <circle cx="20" cy="14" r="8" />
-                    <path d="M4 36c0-8.837 7.163-16 16-16s16 7.163 16 16H4z" />
-                  </svg>
+                <div className="w-12 h-12 rounded-full border border-accent/40 overflow-hidden shrink-0">
+                  <img src={jeffHeadshot} alt="Jeff Sagert" className="w-full h-full object-cover" />
                 </div>
                 <div className="text-left">
                   <p className="text-lg font-serif text-white">About Jeff Sagert</p>
@@ -78,22 +76,34 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
               className="transition-all duration-500 overflow-hidden"
               style={{ maxHeight: active === "jeff" ? "1200px" : "0px" }}
             >
-              <div className="px-8 pb-8 pt-5 border-t border-accent/20 space-y-5 text-white/80 leading-relaxed">
-                <p>
-                  Born and raised in Tottenham, ON, Jeff grew up with a love for sports especially hockey and baseball. After graduating high school on the honour roll, he went on to Wilfrid Laurier University, earning an honours degree in Economics and Financial Management.
-                </p>
-                <p>
-                  Over 25 years in financial services, Jeff is committed to providing exceptional service. Even though the subject matter is complex, he makes it easy to understand using plain language so clients fully grasp how working with him leads to passing on as much of their estate as possible to their heirs.
-                </p>
-                <p className="italic text-accent/90 font-serif text-lg border-l-2 border-accent/40 pl-5">
-                  "Do right by my client every single time without fail."
-                </p>
-                <p>
-                  Each client is unique and their situation different from anyone else's. That means solutions Jeff recommends are tailored to address your own individual circumstances.
-                </p>
-                <p>
-                  Jeff is married to his wife Kerri-Ann, who is a teacher with the Toronto District School Board. He also has two daughters, Tasha and Jadyn, who love playing soccer and baseball respectively.
-                </p>
+              <div className="px-8 pb-8 pt-5 border-t border-accent/20">
+                <div className="grid md:grid-cols-[220px_1fr] gap-8 items-start">
+                  <div className="relative shrink-0">
+                    <div className="absolute inset-0 rounded-2xl bg-accent/15 blur-xl scale-105" />
+                    <img
+                      src={jeffHeadshot}
+                      alt="Jeff Sagert"
+                      className="relative w-full rounded-2xl border border-accent/30 object-cover shadow-xl"
+                    />
+                  </div>
+                  <div className="space-y-5 text-white/80 leading-relaxed">
+                    <p>
+                      Born and raised in Tottenham, ON, Jeff grew up with a love for sports especially hockey and baseball. After graduating high school on the honour roll, he went on to Wilfrid Laurier University, earning an honours degree in Economics and Financial Management.
+                    </p>
+                    <p>
+                      Over 25 years in financial services, Jeff is committed to providing exceptional service. Even though the subject matter is complex, he makes it easy to understand using plain language so clients fully grasp how working with him leads to passing on as much of their estate as possible to their heirs.
+                    </p>
+                    <p className="italic text-accent/90 font-serif text-lg border-l-2 border-accent/40 pl-5">
+                      "Do right by my client every single time without fail."
+                    </p>
+                    <p>
+                      Each client is unique and their situation different from anyone else's. That means solutions Jeff recommends are tailored to address your own individual circumstances.
+                    </p>
+                    <p>
+                      Jeff is married to his wife Kerri-Ann, who is a teacher with the Toronto District School Board. He also has two daughters, Tasha and Jadyn, who love playing soccer and baseball respectively.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
