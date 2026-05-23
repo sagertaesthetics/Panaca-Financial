@@ -29,9 +29,6 @@ export default function About({ setPage }: { setPage: (page: string) => void }) 
               The people behind
               <span className="block text-accent">your plan.</span>
             </h1>
-            <p className="text-white/70 max-w-xl text-lg leading-relaxed">
-              Select a card to learn more.
-            </p>
           </div>
           <div className="relative flex justify-center lg:justify-end">
             <div className="absolute w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
