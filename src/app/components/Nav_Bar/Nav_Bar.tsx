@@ -98,7 +98,7 @@ export default function NavBar({ setPage }: any) {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden border border-accent/40 rounded-full px-4 py-2 text-primary"
+          className="lg:hidden bg-accent rounded-full px-4 py-2 text-primary font-medium"
         >
           {open ? "Close" : "Menu"}
         </button>
