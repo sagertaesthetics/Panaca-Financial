@@ -62,16 +62,21 @@ export default function App() {
   <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
     <div>
 
-      <div className="flex flex-wrap gap-3 mb-8">
-        {["Tax Planning", "Estate Preservation", "Legacy Creation"].map((item) => (
-          <span
-            key={item}
-            className="rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-xs md:text-sm uppercase tracking-[0.18em] text-accent"
-          >
-            {item}
-          </span>
-        ))}
-      </div>
+<div className="flex flex-wrap gap-3 mb-8">
+  {[
+    { label: "Tax Planning", page: "taxes" },
+    { label: "Estate Preservation", page: "estate-preservation" },
+    { label: "Legacy Creation", page: "charitable-giving" },
+  ].map((item) => (
+    <button
+      key={item.label}
+      onClick={() => setPage(item.page as Page)}
+      className="rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-xs md:text-sm uppercase tracking-[0.18em] text-accent hover:bg-accent/20 transition"
+    >
+      {item.label}
+    </button>
+  ))}
+</div>
 
 <p className="text-accent text-3xl md:text-5xl font-serif italic tracking-wide leading-tight mb-10">
   Don&apos;t leave your legacy to chance.
