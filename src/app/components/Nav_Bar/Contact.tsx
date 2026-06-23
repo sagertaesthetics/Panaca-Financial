@@ -20,26 +20,36 @@ export default function Contact() {
           long-term wealth for you and your family.
         </p>
 
-        {/* ACTION BUTTONS */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+{/* ACTION BUTTONS */}
+<div className="flex flex-col sm:flex-row justify-center gap-4">
 
-          {/* EMAIL */}
-          <a
-            href={`mailto:${contactInfo.email}?subject=Panaca Financial Inquiry`}
-            className="px-10 py-4 rounded-full bg-accent text-primary text-lg hover:opacity-90 transition shadow-xl"
-          >
-            Email Us
-          </a>
+  {/* EMAIL */}
+  <a
+    href={`mailto:${contactInfo.email}?subject=Panaca Financial Inquiry`}
+    className="px-10 py-4 rounded-full bg-accent text-primary text-lg hover:opacity-90 transition shadow-xl"
+  >
+    Email Us
+  </a>
 
-          {/* PHONE */}
-          <a
-            href={`tel:${contactInfo.phone}`}
-            className="px-10 py-4 rounded-full border border-accent text-white text-lg hover:bg-accent/10 transition"
-          >
-            Call Us
-          </a>
+  {/* PHONE */}
+  <a
+    href={`tel:${contactInfo.phone}`}
+    className="px-10 py-4 rounded-full border border-accent text-white text-lg hover:bg-accent/10 transition"
+  >
+    Call Us
+  </a>
 
-        </div>
+  {/* LINKEDIN */}
+  <a
+    href="https://www.linkedin.com/in/jeff-sagert-121609150/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-10 py-4 rounded-full border border-accent text-white text-lg hover:bg-accent/10 transition"
+  >
+    LinkedIn
+  </a>
+
+</div>
 
         {/* CONTACT DETAILS */}
         <div className="mt-12 space-y-3 text-white/60 text-sm">
