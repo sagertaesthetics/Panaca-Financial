@@ -155,10 +155,13 @@ export default function CorporateTax({ setPage }: any) {
     alone.
   </p>
 </div>
-        <div
-          id="lifetime-capital-gains"
-          className="premium-card p-8 mb-16 scroll-mt-32"
-        >
+
+</div> {/* <-- Missing closing div for #small-business-deduction */}
+
+<div
+  id="lifetime-capital-gains"
+  className="premium-card p-8 mb-16 scroll-mt-32"
+>
           <h2 className="text-3xl font-serif text-accent mb-4">
             Lifetime Capital Gains Exemption Risk
           </h2>
