@@ -90,15 +90,15 @@ export default function FAQPage({ setPage }: any) {
               </p>
 
               {getServiceLink(section.title) && (
-                <button
+                <span
                   onClick={(e) => {
                     e.stopPropagation();
                     setPage(getServiceLink(section.title));
                   }}
-                  className="px-4 py-2 rounded-full border border-accent/30 bg-white/5 text-white/75 hover:bg-accent/10 hover:text-white transition text-sm"
+                  className="inline-block px-4 py-2 rounded-full border border-accent/30 bg-white/5 text-white/75 hover:bg-accent/10 hover:text-white transition text-sm"
                 >
                   Learn More →
-                </button>
+                </span>
               )}
             </button>
           ))}
@@ -116,7 +116,7 @@ export default function FAQPage({ setPage }: any) {
                   {faq.question}
                 </h3>
 
-                <p className="text-white/75 leading-relaxed">
+                <p className="text-white/75 leading-relaxed whitespace-pre-line">
                   {faq.answer}
                 </p>
               </div>
