@@ -1,5 +1,10 @@
 export const faqSections = [
   {
+  question: "Why is the company called Panaca Financial?",
+  answer:
+    "Panaca is the term that the Incas used when one of their rulers passed away. It described how their estate, possessions, and property were distributed to their heirs — representing the passing of wealth from one generation to the next.\n\nThis reflects our purpose at Panaca Financial: helping business owners and high net worth individuals preserve their wealth and pass more of their estate on to the people and causes that matter most.\n\nThe name also honours a life-changing trip to Peru that shaped our perspective on wealth, legacy, and what truly matters."
+}
+  {
     title: "Estate Planning",
     faqs: [
       {
