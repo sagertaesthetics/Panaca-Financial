@@ -18,19 +18,11 @@ export const aboutPanaca = [
 
   "We act as the quarterback for your financial defense — simplifying complexity, helping you see the full picture, and building customized strategies designed around your goals, family, and legacy.",
 
-  "We believe strong financial planning begins with strong relationships built on trust, transparency, and personalized guidance.",
+  "Panaca is a term from the Inca civilization that described how a ruler's estate, possessions, and property were passed on to their heirs — representing the transfer of wealth from one generation to the next.",
 
-  "By taking the time to truly understand our clients, their families, and their vision for the future, we create financial strategies tailored specifically to their long-term objectives.",
+  "This meaning reflects exactly what we do at Panaca Financial: helping business owners and high net worth individuals preserve the wealth they have built and pass more of their estate on to the people and causes that matter most.",
 
-  "Panaca is the term that the Incas used when one of their rulers passed away. It described how the ruler's estate, possessions, and property were distributed to its heirs — representing the passing of wealth from one generation to the next.",
+  "The name Panaca was chosen to honour a life-changing experience that shaped Jeff's perspective on wealth and legacy. During a childhood trip to Peru, Jeff experienced the Inca culture and spent time with communities who had very little materially, yet displayed incredible happiness and gratitude.",
 
-  "At a very high level, this reflects exactly what we do at Panaca Financial. We help business owners and high net worth individuals pass on more of their estate to their heirs, keeping the wealth they have built intact.",
-
-  "However, the meaning behind the name goes much deeper. The name Panaca was chosen to honour a life-changing experience that shaped Jeff's perspective on wealth, happiness, and legacy.",
-
-  "When Jeff was in grade six, he spent two weeks in Peru with his Dad. The first week was spent in Cusco learning about and experiencing the Inca way of life. The second week was spent in the Amazon jungle with his Aunt and Uncle, who were missionaries helping translate the word of God into native Peruvian languages.",
-
-  "That trip profoundly changed his perspective. The people he met were some of the happiest people he had ever encountered. Despite having very few possessions, they always carried a sense of joy and gratitude.",
-
-  "After the trip, Jeff realized that happiness does not come from material possessions. The name Panaca serves as a reminder that true wealth is not simply about what you own, but the legacy you create and the impact you leave behind."
+  "That experience created a lasting reminder that true wealth is not simply measured by what we own, but by the legacy we create and the impact we leave behind."
 ];
